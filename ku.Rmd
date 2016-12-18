@@ -7,9 +7,13 @@ output:
   xaringan::moon_reader:
     lib_dir: libs
     css: ['default', 'ku.css']
+    seal: false
     nature:
+      ratio: '16:9'
+      slideNumberFormat: '%current%' 
       highlightStyle: github
       highlightLines: true
+      countIncrementalSlides: false
 ---
 
 ```{r setup, include=FALSE}
@@ -29,10 +33,44 @@ class: center, middle
 
 ### /ʃæ.'riŋ.ɡæn/
 
+| wqwe | qweqwe |
+|------+--------|
+| 123  |    123 |
+| 123  |   321  |
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<style>
+.smaller-font { font-size:14px } 
+</style>
+
+...
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|header1 | header 2|
+|--------|---------|
+| 1      | 2       |
+| 3      | 4       |
+]
+
 ---
 class: inverse, center, middle
 
 # Get Started
+
+---
+
+# Tabeller
+
+
+This is just a standard slide with a bit of information
+
+```{r,results='markup',echo=FALSE}
+knitr::kable(head(iris), format = 'markdown')
+```
+
+This slide also contains an awful lot of text just to be able to see how things are wrapped around.
+
+
 
 ---
 
