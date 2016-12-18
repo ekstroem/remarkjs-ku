@@ -1,1 +1,1 @@
-# ku-remarkjs
+# remarkjs-ku
