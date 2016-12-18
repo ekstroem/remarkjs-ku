@@ -11,6 +11,8 @@
     <script src="libs/leaflet/leaflet.js"></script>
     <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
     <script src="libs/leaflet-binding/leaflet.js"></script>
+    <script src="libs/d3/d3.min.js"></script>
+    <script src="libs/simpleNetwork-binding/simpleNetwork.js"></script>
     <link rel="stylesheet" href="ku.css" type="text/css" />
   </head>
   <body>
@@ -307,8 +309,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div id="htmlwidget-a050683a4406c4143665" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a050683a4406c4143665">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-25a3edd30cf53565d6c6" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-25a3edd30cf53565d6c6">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -515,6 +517,119 @@ class: center, middle
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
 The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+
+
+---
+
+
+
+This is just a standard slide with a bit of information
+
+
+| Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
+|------------:|-----------:|------------:|-----------:|:-------|
+|          5.1|         3.5|          1.4|         0.2|setosa  |
+|          4.9|         3.0|          1.4|         0.2|setosa  |
+|          4.7|         3.2|          1.3|         0.2|setosa  |
+|          4.6|         3.1|          1.5|         0.2|setosa  |
+|          5.0|         3.6|          1.4|         0.2|setosa  |
+|          5.4|         3.9|          1.7|         0.4|setosa  |
+
+This slide also contains an awful lot of text just to be able to see how things are wrapped around.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+And a bit of math
+
+$$ y = a\cdot x + b + \epsilon $$
+
+---
+
+# Slide with R Code and Output
+
+
+```r
+summary(cars)
+```
+
+```
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+```
+
+$$ y = g(x) $$
+
+
+
+---
+
+## Plot in two columns
+
+
+```r
+head(mtcars)
+```
+
+```
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+```
+
+```r
+par(bg = "yellow")
+pairs(mtcars)
+```
+
+![](ku_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+  
+---
+
+![](ku_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+
+---
+
+# Graphics - ggplot2
+
+![](ku_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+
+---
+
+# Francisca 2
+
+![](ku_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+---
+
+# rets
+ 
+
+```
+## 
+## Attaching package: 'networkD3'
+```
+
+```
+## The following object is masked from 'package:leaflet':
+## 
+##     JS
+```
+
+<div id="htmlwidget-1599530c664776b8994d" style="width:504px;height:504px;" class="simpleNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1599530c664776b8994d">{"x":{"links":{"source":["Artikel  3","Artikel  4","Artikel  6","Artikel  6","Artikel  5","Artikel  8","Artikel  8","Artikel  7","Artikel  9","Artikel  9","Artikel  9"],"target":["Artikel  1","Artikel  1","Artikel  3","Artikel  5","Artikel  2","Artikel  2","Artikel  4","Artikel  4","Artikel  7","Artikel  6","Artikel  8"]},"options":{"linkDistance":50,"charge":-200,"fontSize":7,"fontFamily":"serif","linkColour":"#666","nodeColour":"#3182bd","nodeClickColour":"#E34A33","textColour":"#3182bd","opacity":0.6,"zoom":false}},"evals":[],"jsHooks":[]}</script>
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

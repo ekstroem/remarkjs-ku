@@ -470,3 +470,128 @@ class: center, middle
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
 The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+
+
+---
+
+```{r, echo=FALSE, eval=FALSE}
+theme_hc(bgcolor = "black") +
+  scale_colour_hc("darkunica")
+```
+
+This is just a standard slide with a bit of information
+
+```{r,results='markup',echo=FALSE}
+knitr::kable(head(iris), format='markdown')
+```
+
+This slide also contains an awful lot of text just to be able to see how things are wrapped around.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+And a bit of math
+
+$$ y = a\cdot x + b + \epsilon $$
+
+---
+
+# Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+$$ y = g(x) $$
+
+
+
+---
+
+## Plot in two columns
+
+```{r}
+head(mtcars)
+par(bg = "yellow")
+pairs(mtcars)
+```
+  
+---
+
+```{r echo=FALSE,warning=FALSE}
+library(ggplot2)
+library(ggthemr)
+
+claus <- define_palette(swatch = c('#eeeeee', '#901A1E', 'lightblue', 'green', 'blue', 'brown', 'purple', 'yellow'), 
+  gradient = c(lower = 'red', upper = 'green'),
+                        background = "#222222", 
+                        text = c("#eeeeee", "#eeeeee"), 
+                        line = c("#ee1e1e", "#6e6e6e"), # Axis lines 
+                        gridline = "#434343") # Gridlines
+
+
+ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
+
+mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
+  geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
+  theme(legend.position = 'bottom')
+mpg_plot
+```
+
+---
+
+# Graphics - ggplot2
+
+```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
+library(extrafont)
+loadfonts()
+library(ggplot2)
+p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
+  ggtitle("Fuel Efficiency of 32 Cars") +
+  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
+  theme(text=element_text(size=16, family="Comic Sans MS"))
+p
+```
+
+---
+
+# Francisca 2
+
+```{r echo=FALSE,warning=FALSE,message=FALSE}
+theme_xkcd <- theme(
+  
+#  panel.background = element_rect(fill="transparent"),
+#  plot.background = element_rect(fill="transparent"),
+
+  #axis.ticks = element_line(colour=NA),
+##  panel.grid = element_line(colour="white"),
+  #axis.text.y = element_text(colour=NA),
+##  axis.text.x = element_text(colour="black"),
+  text = element_text(size=16, family="Humor Sans")
+)
+p + theme_xkcd 
+```
+
+---
+
+# rets
+ 
+```{r echo=FALSE}
+
+nodes <- data.frame(name=paste("Artikel ", 1:9), 
+                    group=sample(1:4, size=9, replace=TRUE), 
+                    size=sample(1:4, size=9, replace=TRUE))
+
+links <- data.frame(source=c(3, 4, 6, 6, 5, 8, 8, 7, 9, 9, 9)-1, 
+                    target=c(1, 1, 3, 5, 2, 2, 4, 4, 7, 6, 8)-1, 
+                    value=sample(1:4, size=11, replace=TRUE))
+library(networkD3)
+
+networkData <- data.frame(nodes$name[links$source+1], nodes$name[links$target+1])
+
+# Plot
+simpleNetwork(networkData)
+```
