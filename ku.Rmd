@@ -20,7 +20,21 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+class: center, middle, kulogo
+
+# cleanR
+
+## And some other stuff
+
+asd
+asd
+as
+dasds
+
+---
+
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/12/We_Can_Do_It%21.jpg)
 
 ???
 

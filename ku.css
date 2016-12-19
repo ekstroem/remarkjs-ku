@@ -28,6 +28,13 @@ tbody tr:nth-child(odd) {   /* Zebra stipes for tables */
     background-color: #444;
 }
 
+/* */
+.kulogo {
+    background-image: url(kulogowhiteq.png);
+    background-position: 100% 100%;
+    background-size: 30%;
+}
+
 
 
 h1, h2, h3 {
