@@ -14,9 +14,18 @@
     <script src="libs/d3/d3.min.js"></script>
     <script src="libs/simpleNetwork-binding/simpleNetwork.js"></script>
     <link rel="stylesheet" href="ku.css" type="text/css" />
+    <link rel="stylesheet" href="animate.min.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Presentation Ninja
+## ⚔<br/>with xaringan
+### Claus Thorn Ekstrøm
+### 2016/12/12
+
+---
 
 
 
@@ -42,7 +51,7 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/12/We_Can
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
 
 ---
-class: center, middle
+class: center, middle, animated, lightSpeedIn
 
 # xaringan
 
@@ -323,8 +332,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div id="htmlwidget-66ff52c39dc09a6339e4" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-66ff52c39dc09a6339e4">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c28f3fe8b5199406a3d1" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c28f3fe8b5199406a3d1">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -642,8 +651,8 @@ pairs(mtcars)
 ##     JS
 ```
 
-<div id="htmlwidget-6847ca61856021f03358" style="width:504px;height:504px;" class="simpleNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6847ca61856021f03358">{"x":{"links":{"source":["Artikel  3","Artikel  4","Artikel  6","Artikel  6","Artikel  5","Artikel  8","Artikel  8","Artikel  7","Artikel  9","Artikel  9","Artikel  9"],"target":["Artikel  1","Artikel  1","Artikel  3","Artikel  5","Artikel  2","Artikel  2","Artikel  4","Artikel  4","Artikel  7","Artikel  6","Artikel  8"]},"options":{"linkDistance":50,"charge":-200,"fontSize":7,"fontFamily":"serif","linkColour":"#666","nodeColour":"#3182bd","nodeClickColour":"#E34A33","textColour":"#3182bd","opacity":0.6,"zoom":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-768a8af2af7513c100f6" style="width:504px;height:504px;" class="simpleNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-768a8af2af7513c100f6">{"x":{"links":{"source":["Artikel  3","Artikel  4","Artikel  6","Artikel  6","Artikel  5","Artikel  8","Artikel  8","Artikel  7","Artikel  9","Artikel  9","Artikel  9"],"target":["Artikel  1","Artikel  1","Artikel  3","Artikel  5","Artikel  2","Artikel  2","Artikel  4","Artikel  4","Artikel  7","Artikel  6","Artikel  8"]},"options":{"linkDistance":50,"charge":-200,"fontSize":7,"fontFamily":"serif","linkColour":"#666","nodeColour":"#3182bd","nodeClickColour":"#E34A33","textColour":"#3182bd","opacity":0.6,"zoom":false}},"evals":[],"jsHooks":[]}</script>
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

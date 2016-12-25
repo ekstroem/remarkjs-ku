@@ -6,8 +6,8 @@ date: "2016/12/12"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ['default', 'ku.css']
-    seal: false
+    css: ['default', 'ku.css', 'animate.min.css']
+    seal: true
     nature:
       ratio: '16:9'
       slideNumberFormat: '%current%' 
@@ -41,7 +41,7 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/12/We_Can
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
 
 ---
-class: center, middle
+class: center, middle, animated, lightSpeedIn
 
 # xaringan
 
