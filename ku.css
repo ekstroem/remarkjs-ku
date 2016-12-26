@@ -2,22 +2,25 @@
  *
  * KU - Remark tweaks
  * 
- * Claus Ekstrøm 2016
+ * Claus Ekstrøm 2016-2017
  *
+ * This CSS file consists of two types of changes: 1) changes to the default style, and 2) new additions
+ * There is no ordering of these and it would be a good idea if they were added in separate sections
+ * 
  ************/
 
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
-/* CE fonts */
+/* CE Added my favorite fonts */
 @import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans');
 
 body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
        background-color:#222;
      }
 
-/* Default background colour */
+/* Default background colour, and font size */
 .remark-slide-content{ background-color:#222;
 		       font-family: 'Fira Sans', 'Yanone Kaffeesatz';
 		       color: #fff;
@@ -25,6 +28,16 @@ body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino
 /*		       font-family: 'Alegreya Sans', sans-serif; */
 		       font-family: 'Alegreya', serif;		       
 		     }
+/* Remove the drop box shadow around the slides in full screen */
+.remark-slide-scaler {
+    -webkit-box-shadow: 0 0 0px #888;
+    box-shadow: 0 0 0px #888;
+}
+
+/* Change the overall background colour _outside_ the actual slides */
+body:-webkit-full-screen {
+    background: #222;
+}
 
 /* Tables */
 table th {
@@ -47,11 +60,6 @@ table td  { padding: 0px 16px; }
 
 .large { font-size: 130% }
 .small { font-size: 70% }
-
-
-
-
-
 
 
 
