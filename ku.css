@@ -93,6 +93,11 @@ a, a > code {
     text-shadow: 0 0 20px #333;
 }
 
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #f3f3f3;
+  line-height: 0.8em;
+}
+
 
 .title-slide {
     background-color: #0728A2;
@@ -101,13 +106,13 @@ a, a > code {
     background-position: 100% 100%;
     background-size: 30%;
     background-color:#222;
-    color: #fff;		         
+    color: #fff;
 }
 
-.inverse h1, .inverse h2, .inverse h3 {
-  color: #f3f3f3;
-  line-height: 0.8em;
+.title-slide h1, .title-slide h2 {
+
 }
+
 
 /* Two-column layout */
 .left-column {
