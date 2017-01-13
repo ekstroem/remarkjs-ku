@@ -61,9 +61,6 @@ table td  { padding: 0px 16px; }
 .large { font-size: 130% }
 .small { font-size: 70% }
 
-
-
-
 h1, h2, h3 {
     font-family: 'Yanone Kaffeesatz';
     font-family: 'Alegreya Sans', sans-serif; 
@@ -82,20 +79,53 @@ a, a > code {
   font-size: 90%;
 }
 
+
+video#videobg {
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.dimbg {
+    -webkit-filter: blur(5px) opacity(.3);
+    -moz-filter: blur(10px) opacity(.3);
+    -o-filter: blur(5px) opacity(.3);
+    -ms-filter: blur(5px) opacity(.3);
+    filter: blur(5px) opacity(.3);
+    /*    opacity: 0.5; */
+}
+
+.fullimage {
+    z-index:-5;    
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
 .remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
 				    font-size: 100%; }
 
 .remark-code-line-highlighted     { background-color: #ffff88; }
 
 .inverse {
-    background-color: #A72822;
-    color: #777872;
+    //    background-color: #A72822;
+    background-color: #901A1E;    
+    //    color: #777872;
+    color: #f3f3f3;
     text-shadow: 0 0 20px #333;
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-  color: #f3f3f3;
-  line-height: 0.8em;
+    color: #f3f3f3;
+    text-shadow: 0 0 20px #333;
+//  line-height: 0.8em;
 }
 
 
