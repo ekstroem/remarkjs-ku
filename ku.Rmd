@@ -78,9 +78,11 @@ class: inverse, center, middle
 
 This is just a standard slide with a bit of information
 
+.center[
 ```{r,results='markup',echo=FALSE}
 knitr::kable(head(iris), format = 'markdown')
 ```
+]
 
 This slide also contains an awful lot of text just to be able to see how things are wrapped around.
 
@@ -495,9 +497,11 @@ theme_hc(bgcolor = "black") +
 
 This is just a standard slide with a bit of information
 
+.right[
 ```{r,results='markup',echo=FALSE}
 knitr::kable(head(iris), format='markdown')
 ```
+]
 
 This slide also contains an awful lot of text just to be able to see how things are wrapped around.
 

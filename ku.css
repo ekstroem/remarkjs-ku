@@ -24,10 +24,11 @@ body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino
 .remark-slide-content{ background-color:#222;
 		       font-family: 'Fira Sans', 'Yanone Kaffeesatz';
 		       color: #fff;
-		       font-size: 160%;
+		       font-size: 180%;
 /*		       font-family: 'Alegreya Sans', sans-serif; */
 		       font-family: 'Alegreya', serif;		       
 		     }
+
 /* Remove the drop box shadow around the slides in full screen */
 .remark-slide-scaler {
     -webkit-box-shadow: 0 0 0px #888;
@@ -39,7 +40,15 @@ body:-webkit-full-screen {
     background: #222;
 }
 
-/* Tables */
+
+/****************
+ *
+ * Tables
+ *
+ ****************/
+
+table { display: inline-block; }  /* Fix centering of tables  */ 
+
 table th {
     background-color: #901A1E; /* KUs farve for table headers */
     padding: 0px 6px; 
@@ -51,7 +60,16 @@ tbody tr:nth-child(odd) {   /* Zebra stipes for tables */
 
 table td  { padding: 0px 16px; }
 
-/* */
+
+/***********
+ *
+ * Changed CSS
+ *
+ **************/
+
+
+
+/* Insert logo as background image */
 .kulogo {
     background-image: url(kulogowhiteq.png);
     background-position: 100% 100%;
@@ -59,6 +77,7 @@ table td  { padding: 0px 16px; }
 }
 
 .large { font-size: 130% }
+.footnotesize { font-size: 85% }
 .small { font-size: 70% }
 
 h1, h2, h3 {
@@ -106,6 +125,23 @@ video#videobg {
     min-height: 100%;
     width: auto;
     height: auto;
+}
+
+@page {
+    size: 1210px 681px; 
+    /* size: 908px 681px; */ /* For 4x3 aspect */ 
+    margin: 0;
+}
+
+
+@media print {
+    .remark-slide-scaler {
+	width: 100% !important;
+	height: 100% !important;
+	transform: scale(1) !important;
+	top: 0 !important;
+	left: 0 !important;
+    }
 }
 
 
