@@ -76,9 +76,94 @@ table td  { padding: 0px 16px; }
     background-size: 30%;
 }
 
+video#videobg {
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.dimbg {
+    -webkit-filter: blur(5px) opacity(.3);
+    -moz-filter: blur(10px) opacity(.3);
+    -o-filter: blur(5px) opacity(.3);
+    -ms-filter: blur(5px) opacity(.3);
+    filter: blur(5px) opacity(.3);
+    /*    opacity: 0.5; */
+}
+
+
+/**************
+ *
+ * Font size and colours
+ *
+ **************/
+
+
 .large { font-size: 130% }
 .footnotesize { font-size: 85% }
 .small { font-size: 70% }
+
+.black { color: black; }
+
+.bold { font-weight: bold; }
+.bolder { font-weight: bolder; }
+
+
+/**************
+ *
+ * Fancy stuff
+ *
+ **************/
+
+/*  */
+
+.rotate-left>img {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    transform: rotate(-2deg); 
+}
+
+.rotate-right>img {
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    transform: rotate(2deg);     
+}
+
+
+.pol>img
+{
+    background: white;
+    display: inline;
+    float: left;
+    margin: 0 15px 30px;
+    padding: 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0px 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, .5);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+    z-index:0;
+    position:relative;
+}
+
+
+.polaroid>img {
+    padding: 5px;
+    border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px #999;
+}
+
+
 
 h1, h2, h3 {
     font-family: 'Yanone Kaffeesatz';
@@ -99,25 +184,6 @@ a, a > code {
 }
 
 
-video#videobg {
-    position: fixed;
-    top: 50%; left: 50%;
-    z-index: 1;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-}
-
-.dimbg {
-    -webkit-filter: blur(5px) opacity(.3);
-    -moz-filter: blur(10px) opacity(.3);
-    -o-filter: blur(5px) opacity(.3);
-    -ms-filter: blur(5px) opacity(.3);
-    filter: blur(5px) opacity(.3);
-    /*    opacity: 0.5; */
-}
 
 .fullimage {
     z-index:-5;    
