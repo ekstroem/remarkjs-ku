@@ -164,6 +164,14 @@ video#videobg {
 }
 
 
+.background-multiply {
+    background-blend-mode: multiply;
+}
+
+
+
+
+
 
 h1, h2, h3 {
     font-family: 'Yanone Kaffeesatz';
