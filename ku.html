@@ -3,7 +3,7 @@
   <head>
     <title>Presentation Ninja</title>
     <meta charset="utf-8">
-    <meta name="author" content="Claus Thorn Ekstrøm" />
+    <meta name="author" content="Claus Thorn Ekstrøm UCPH Biostatistics .small[ekstrom@sund.ku.dk]" />
     <link href="libs/remark-css/example.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/jquery/jquery.min.js"></script>
@@ -22,24 +22,27 @@ class: center, middle, inverse, title-slide
 
 # Presentation Ninja
 ## ⚔<br/>with xaringan
-### Claus Thorn Ekstrøm
-### 2016/12/12
+### Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[<a href="mailto:ekstrom@sund.ku.dk">ekstrom@sund.ku.dk</a>]
+### Some day 2017, January 30th<br>.small[Slides @ <a href="www.biostatistics.dk/talks/">biostatistics.dk/talks/</a>]
 
 ---
 
 
 
 
-class: center, middle, kulogo
+class: middle, kulogo
 
-# cleanR
+# Classes
 
-## And some other stuff
+The `class` list can add a class to the entire slide. Possibilities are
 
-asd
-asd
-as
-dasds
+* center - center page horizontally
+* middle - center page vertically
+* bottom - move text to bottom
+* inverse - red background
+* kulogo - add logo at lower right corner
+* animate - add slide transition animations
+* background-image - add background image
 
 ---
 
@@ -49,6 +52,24 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/12/We_Can
 ???
 
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+
+---
+
+class: inverse
+
+.cornerlift[
+
+
+]
+
+
+.cornerlift[
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
+]
+
+
+
 
 ---
 class: center, middle, animated, lightSpeedIn
@@ -85,9 +106,6 @@ class: inverse, center, middle
 
 # Tabeller
 
-
-This is just a standard slide with a bit of information
-
 .center[
 
 | Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
@@ -100,47 +118,29 @@ This is just a standard slide with a bit of information
 |          5.4|         3.9|          1.7|         0.4|setosa  |
 ]
 
-This slide also contains an awful lot of text just to be able to see how things are wrapped around.
-
-
+Tabeller bliver ikke centreret per default så de skal muligvis wrappes i en center class.
 
 ---
 
-# Hello World
+# Tilføj tekst
 
-Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
-
-
-```r
-devtools::install_github("yihui/xaringan")
-```
+Her er en linje
 
 --
 
-You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
-
-- Create a new R Markdown document from the menu `File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation`;&lt;sup&gt;1&lt;/sup&gt;
+og en mere 
 
 --
 
-- Click the `Knit` button to compile it;
 
---
+og endnu en
 
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)&lt;sup&gt;2&lt;/sup&gt; "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
 
 .footnote[
 [1] 中文用户请看[这份教程](http://slides.yihui.name/xaringan/zh-CN.html)
 
 [2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
 ]
-
----
-background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
-background-position: 50% 50%
-class: center, bottom, inverse
-
-# You only live once!
 
 ---
 # Aloha
@@ -192,17 +192,6 @@ It is important to be familiar with remark.js before you can understand the opti
 
 .footnote[[*] It is different with Pandoc's Markdown! It is limited but should be enough for presentation purporses. Come on... You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js [may be improved](https://github.com/gnab/remark/issues/142) in the future.]
 
----
-background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
-background-size: cover
-class: center, bottom, inverse
-
-# I was so happy to have discovered remark.js!
-
----
-class: inverse, middle, center
-
-# Using xaringan
 
 ---
 
@@ -334,8 +323,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div id="htmlwidget-0bb4ac15062baf13f57f" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0bb4ac15062baf13f57f">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6a5bb3d99aad80f16f4e" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6a5bb3d99aad80f16f4e">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -621,23 +610,23 @@ par(bg = "yellow")
 pairs(mtcars)
 ```
 
-![](ku_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](ku_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
   
 ---
 
-![](ku_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](ku_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
 
 ---
 
 # Graphics - ggplot2
 
-![](ku_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+![](ku_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
 
 ---
 
 # Francisca 2
 
-![](ku_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+![](ku_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -655,8 +644,8 @@ pairs(mtcars)
 ##     JS
 ```
 
-<div id="htmlwidget-03640579528ab009def0" style="width:504px;height:504px;" class="simpleNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-03640579528ab009def0">{"x":{"links":{"source":["Artikel  3","Artikel  4","Artikel  6","Artikel  6","Artikel  5","Artikel  8","Artikel  8","Artikel  7","Artikel  9","Artikel  9","Artikel  9"],"target":["Artikel  1","Artikel  1","Artikel  3","Artikel  5","Artikel  2","Artikel  2","Artikel  4","Artikel  4","Artikel  7","Artikel  6","Artikel  8"]},"options":{"linkDistance":50,"charge":-200,"fontSize":7,"fontFamily":"serif","linkColour":"#666","nodeColour":"#3182bd","nodeClickColour":"#E34A33","textColour":"#3182bd","opacity":0.6,"zoom":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-be01a2928116e422d19a" style="width:504px;height:504px;" class="simpleNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be01a2928116e422d19a">{"x":{"links":{"source":["Artikel  3","Artikel  4","Artikel  6","Artikel  6","Artikel  5","Artikel  8","Artikel  8","Artikel  7","Artikel  9","Artikel  9","Artikel  9"],"target":["Artikel  1","Artikel  1","Artikel  3","Artikel  5","Artikel  2","Artikel  2","Artikel  4","Artikel  4","Artikel  7","Artikel  6","Artikel  8"]},"options":{"linkDistance":50,"charge":-200,"fontSize":7,"fontFamily":"serif","linkColour":"#666","nodeColour":"#3182bd","nodeClickColour":"#E34A33","textColour":"#3182bd","opacity":0.6,"zoom":false}},"evals":[],"jsHooks":[]}</script>
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

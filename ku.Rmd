@@ -1,8 +1,8 @@
 ---
 title: "Presentation Ninja"
 subtitle: "⚔<br/>with xaringan"
-author: "Claus Thorn Ekstrøm"
-date: "2016/12/12"
+author: "Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[ekstrom@sund.ku.dk]"
+date: "Some day 2017, January 30th<br>.small[Slides @ [biostatistics.dk/talks/](www.biostatistics.dk/talks/)]"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -20,16 +20,19 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-class: center, middle, kulogo
+class: middle, kulogo
 
-# cleanR
+# Classes
 
-## And some other stuff
+The `class` list can add a class to the entire slide. Possibilities are
 
-asd
-asd
-as
-dasds
+* center - center page horizontally
+* middle - center page vertically
+* bottom - move text to bottom
+* inverse - red background
+* kulogo - add logo at lower right corner
+* animate - add slide transition animations
+* background-image - add background image
 
 ---
 
@@ -39,6 +42,24 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/12/We_Can
 ???
 
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+
+---
+
+class: inverse
+
+.cornerlift[
+
+
+]
+
+
+.cornerlift[
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
+]
+
+
+
 
 ---
 class: center, middle, animated, lightSpeedIn
@@ -75,55 +96,35 @@ class: inverse, center, middle
 
 # Tabeller
 
-
-This is just a standard slide with a bit of information
-
 .center[
 ```{r,results='markup',echo=FALSE}
 knitr::kable(head(iris), format = 'markdown')
 ```
 ]
 
-This slide also contains an awful lot of text just to be able to see how things are wrapped around.
-
-
+Tabeller bliver ikke centreret per default så de skal muligvis wrappes i en center class.
 
 ---
 
-# Hello World
+# Tilføj tekst
 
-Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
-
-```{r eval=FALSE, tidy=FALSE}
-devtools::install_github("yihui/xaringan")
-```
+Her er en linje
 
 --
 
-You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
-
-- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
+og en mere 
 
 --
 
-- Click the `Knit` button to compile it;
 
---
+og endnu en
 
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
 
 .footnote[
 [1] 中文用户请看[这份教程](http://slides.yihui.name/xaringan/zh-CN.html)
 
 [2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
 ]
-
----
-background-image: url(`r xaringan:::karl`)
-background-position: 50% 50%
-class: center, bottom, inverse
-
-# You only live once!
 
 ---
 # Aloha
@@ -163,17 +164,6 @@ It is important to be familiar with remark.js before you can understand the opti
 
 .footnote[[*] It is different with Pandoc's Markdown! It is limited but should be enough for presentation purporses. Come on... You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js [may be improved](https://github.com/gnab/remark/issues/142) in the future.]
 
----
-background-image: url(`r xaringan:::karl`)
-background-size: cover
-class: center, bottom, inverse
-
-# I was so happy to have discovered remark.js!
-
----
-class: inverse, middle, center
-
-# Using xaringan
 
 ---
 
