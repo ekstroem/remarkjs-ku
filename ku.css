@@ -217,8 +217,17 @@ a, a > code {
     min-width: 100%;
     min-height: 100%;
     width: auto;
-    height: auto;
+    height: auto; 
 }
+
+.fullimage2 {
+    z-index:-5;    
+    min-width: 900px;
+    min-height: 900px;
+/*    width: auto;
+    height: auto; */
+}
+
 
 @page {
     size: 1210px 681px; 
