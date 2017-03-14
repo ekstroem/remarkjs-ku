@@ -24,7 +24,7 @@ body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino
 .remark-slide-content{ background-color:#222;
 		       font-family: 'Fira Sans', 'Yanone Kaffeesatz';
 		       color: #fff;
-		       font-size: 220%;    /* Regular text */
+		       font-size: 180%;    /* Regular text */
 /*		       font-family: 'Alegreya Sans', sans-serif; */
 		       font-family: 'Alegreya', serif;		       
 		     }
@@ -193,7 +193,7 @@ h1, h2, h3 {
     font-family: 'Yanone Kaffeesatz';
     font-family: 'Alegreya Sans', sans-serif; 
     font-weight: normal;
-    font-weight: 700;
+    font-weight: 550;
 }
 
 a, a > code {

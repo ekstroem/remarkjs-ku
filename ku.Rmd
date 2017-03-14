@@ -112,10 +112,9 @@ Her er en linje
 
 --
 
-og en mere 
+.large[og en mere]
 
 --
-
 
 og endnu en
 
