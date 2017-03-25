@@ -20,7 +20,7 @@ output:
 library(knitr)
 options(htmltools.dir.version = FALSE)
 opts_chunk$set(dev.args=list(bg="transparent"), fig.width=15, fig.height=7)
-
+source("kutheme.R")
 ```
 
 class: middle, kulogo
@@ -532,26 +532,25 @@ pairs(mtcars)
 ---
 
 ```{r echo=FALSE,warning=FALSE}
-library(ggplot2)
-library(ggthemr)
+#library(ggplot2)
+#library(ggthemr)
 
-# 901A1E
+#claus <- define_palette(swatch = c('#eeeeee', # White
+#                                   "#8282ff", # Blue b9b9ff
+#                                   "#ff7979", # Red
+#                                   '#f2f200', # Yellow
+#                                   "#0bff06", # Green 
+#                                   "#eca8e5", # Magenta 
+#                                   "#ffad5b"  # Brownish
+#), 
+#  gradient = c(lower = 'red', upper = 'green'),
+#                        background = "transparent", 
+#                        text = c("#eeeeee", "#eeeeee"), 
+#                        line = c("#ee1e1e", "#6e6e6e"), # Axis lines 
+#                        gridline = "#434343") # Gridlines
 
-claus <- define_palette(swatch = c('#eeeeee', rev(c(
-                                   "#d73027",
-                                   "#fc8d59", 
-                                   "#fee090", 
-                                   "#e0f3f8", 
-                                   "#4575b4",
-                                   "#91bfdb"))), 
-  gradient = c(lower = 'red', upper = 'green'),
-                        background = "transparent", 
-                        text = c("#eeeeee", "#eeeeee"), 
-                        line = c("#ee1e1e", "#6e6e6e"), # Axis lines 
-                        gridline = "#434343") # Gridlines
 
-
-ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
+#ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
 
 mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
@@ -564,13 +563,13 @@ mpg_plot
 # Graphics - ggplot2
 
 ```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
-library(extrafont)
-loadfonts()
-library(ggplot2)
-p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(size=3) +
+#library(extrafont)
+#loadfonts()
+#library(ggplot2)
+p <- ggplot(mtcars, aes(x=wt, y=mpg, color=factor(carb))) + geom_point(size=4) +
   ggtitle("Fuel Efficiency of 32 Cars") +
   xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
-  theme(text=element_text(size=16, family="Comic Sans MS"))
+  theme(text=element_text(size=20, family="Anime Ace 2.0 BB"))
 p
 ```
 
@@ -579,11 +578,11 @@ p
 # Francisca 2
 
 ```{r echo=FALSE,warning=FALSE,message=FALSE}
-theme_xkcd <- theme(text=element_text(size=24, family="Humor Sans", face="bold"),
-                    panel.background = element_rect(fill = "transparent",colour = NA), # bg of the panel
-                    plot.background = element_rect(fill = "transparent",colour = NA) # bg of the plot
+#theme_xkcd <- theme(text=element_text(size=28, family="Unmasked BB", face="bold"),
+#                    panel.background = element_rect(fill = "transparent",colour = NA), # bg of the panel
+#                    plot.background = element_rect(fill = "transparent",colour = NA) # bg of the plot
             # change stuff here
-        )
+#        )
 
 #  panel.background = element_rect(fill="transparent"),
 #  plot.background = element_rect(fill="transparent"),
@@ -607,7 +606,7 @@ theme_xkcd <- theme(text=element_text(size=24, family="Humor Sans", face="bold")
 
 #ggthemr(mytheme, type = 'outer')
 
-p + theme_xkcd
+p + theme_xkcd() ## + geom_line(aes(y=10), position = position_jitter(h = 0.15), size=2, colour="white")
 
 #p +theme(
 #   panel.grid.minor = element_blank(), 
