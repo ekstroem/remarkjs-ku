@@ -555,7 +555,7 @@ pairs(mtcars)
 mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
   theme(legend.position = 'bottom')
-mpg_plot
+mpg_plot + theme_xkcd()
 ```
 
 ---
