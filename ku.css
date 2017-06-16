@@ -47,7 +47,7 @@ body:-webkit-full-screen {
  *
  ****************/
 
-table { display: inline-block; }  /* Fix centering of tables  */ 
+table { display: inline-block; }  /* Fix centering of tables  */
 
 table th {
     background-color: #901A1E; /* KUs farve for table headers */

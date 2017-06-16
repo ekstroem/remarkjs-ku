@@ -97,6 +97,8 @@ class: inverse, center, middle
 
 ---
 
+class: animated, fadeIn
+
 # Tabeller
 
 .center[
