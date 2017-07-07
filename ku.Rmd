@@ -23,7 +23,7 @@ opts_chunk$set(dev.args=list(bg="transparent"), fig.width=15, fig.height=7)
 source("kutheme.R")
 ```
 
-class: middle, kulogo
+class: middle, sundlogo
 
 # Classes
 

@@ -21,7 +21,7 @@ body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino
      }
 
 /* Default background colour, and font size */
-.remark-slide-content{ background-color:#222;
+.remark-slide-content{ background-color: #222;
 		       font-family: 'Fira Sans', 'Yanone Kaffeesatz';
 		       color: #fff;
 		       font-size: 220%;    /* Regular text */
@@ -194,8 +194,6 @@ video#videobg {
 }
 
 
-
-
 h1, h2, h3 {
     font-family: 'Yanone Kaffeesatz';
     font-family: 'Alegreya Sans', sans-serif; 
@@ -204,7 +202,8 @@ h1, h2, h3 {
 }
 
 a, a > code {
-  color: rgb(249, 38, 114);
+  /* Link colours */
+  color: rgb(144, 26, 30);
   text-decoration: none;
 }
 
@@ -213,7 +212,6 @@ a, a > code {
   bottom: 3em;
   font-size: 90%;
 }
-
 
 
 .fullimage {
@@ -251,15 +249,18 @@ a, a > code {
 }
 
 
+/* Normal code output */
 .remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
-				    font-size: 100%; }
+				    font-size: 90%;
+				  }
 
-.remark-code-line-highlighted     { background-color: #ffff88; }
+.remark-code-line-highlighted     { background-color: #901A1E; }  /* Color coding of highlighted code */
+
 
 .inverse {
-    //    background-color: #A72822;
+    /*    background-color: #A72822; */
     background-color: #901A1E;    
-    //    color: #777872;
+    /*     color: #777872; */
     color: #f3f3f3;
     text-shadow: 0 0 20px #333;
 }
@@ -297,8 +298,16 @@ a, a > code {
     color: #fff;
 }
 
-.title-slide h1, .title-slide h2 {
+.title-slide h1 {
+    font-size: 200%;    /* Regular text */
+}
 
+.title-slide h2 {
+    font-size: 150%;    /* Regular text */
+}
+
+.title-slide h3 {
+    font-size: 120%;    /* Regular text */
 }
 
 
