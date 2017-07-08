@@ -249,12 +249,25 @@ a, a > code {
 }
 
 
-/* Normal code output */
+/* Normal code output 
+   Note that .remark-code also control blocked mathematics
+*/
 .remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
 				    font-size: 90%;
 				  }
 
 .remark-code-line-highlighted     { background-color: #901A1E; }  /* Color coding of highlighted code */
+
+
+/* Block math */ 
+.mjx-math {
+    font-size: 110%;
+}
+
+/* Inline math */ 
+.mjx-chtml {
+    font-size: 110%;
+}
 
 
 .inverse {

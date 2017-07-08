@@ -11,15 +11,15 @@ output:
     nature:
       ratio: '16:9'
       slideNumberFormat: '%current%' 
-      highlightStyle: github
+      highlightStyle: ir-black
       highlightLines: true
       countIncrementalSlides: false
 ---
 
 ```{r setup, include=FALSE}
-library(knitr)
+#library(knitr)
 options(htmltools.dir.version = FALSE)
-opts_chunk$set(dev.args=list(bg="transparent"), fig.width=15, fig.height=7)
+#opts_chunk$set(dev.args=list(bg="transparent"), fig.width=15, fig.height=7)
 source("kutheme.R")
 ```
 
@@ -49,6 +49,63 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 
 ---
 
+class: center
+
+# DiagrammeR
+
+```{r dia1, echo=FALSE, out.width=960, out.height=300}
+library(DiagrammeR)
+grViz("
+  digraph {
+    bgcolor = 'transparent'
+    layout = twopi
+    node [shape = circle, fontcolor = 'white', color = 'white']
+    edge [color = 'white']
+    A -> {B C D}
+  }")
+```
+
+
+
+---
+
+
+# Flowcharts
+
+```{r dia2, echo=FALSE, out.width=960, out.height=100}
+library(DiagrammeR)
+mermaid("
+graph LR
+  A-->B
+")
+
+```
+asd
+
+
+---
+
+class: center, middle, animated, fadeIn
+
+
+# DiagrammeR2
+
+```{r dia3, echo=FALSE, out.width=960, out.height=300}
+library(DiagrammeR)
+grViz("
+  digraph {
+    bgcolor = 'transparent'
+    layout = twopi
+    node [shape = circle, fontcolor = 'white', color = 'white']
+    edge [color = 'white']
+    A -> {B C D}
+  }")
+```
+
+
+---
+
+
 
 $$
 \sum_{j=1}^K{\frac{p_i}{p_j}}
@@ -65,9 +122,7 @@ $$\ell(\pi) = \sum_{i = 1}^{K}\sum_{j = 1}^{K} [w_{ij}(\log \pi_i - \log(\pi_i +
 
 and
 
-$$
-\pi_i^{(n+1)} = \frac{a - 1 + W_i}{b + \sum_{j=1}^K \frac{n_{ij}}{\pi_i^{(n)} + \pi_j^{(n)}}},
-$$
+$$\pi_i^{(n+1)} = \frac{a - 1 + W_i}{b + \sum_{j=1}^K \frac{n_{ij}}{\pi_i^{(n)} + \pi_j^{(n)}}},$$
 
 ---
 
@@ -95,13 +150,9 @@ class: center, middle, animated, lightSpeedIn
 
 | wqwe | qweqwe |
 |------+--------|
-| 123  |    123 |
-| 123  |   321  |
+| 123  | 123 |
+| 123  | 321  |
 
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-<style>
-.smaller-font { font-size:14px } 
-</style>
 
 ...
 
