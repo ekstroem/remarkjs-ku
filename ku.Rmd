@@ -6,7 +6,7 @@ date: "Some day 2017, January 30th<br>.small[Slides @ [biostatistics.dk/talks/](
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ['default', 'ku.css', 'animate.min.css']
+    css: ['default', 'ku.css', 'animate.min.css', 'printable.css']
     seal: true
     nature:
       ratio: '16:9'
@@ -18,7 +18,7 @@ output:
 
 ```{r setup, include=FALSE}
 #library(knitr)
-options(htmltools.dir.version = FALSE)
+options(htmltools.dir.version = FALSE, cache=TRUE)
 #opts_chunk$set(dev.args=list(bg="transparent"), fig.width=15, fig.height=7)
 source("kutheme.R")
 ```

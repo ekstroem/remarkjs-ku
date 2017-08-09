@@ -230,22 +230,15 @@ a, a > code {
     height: auto; */
 }
 
-
-@page {
-    size: 1210px 681px; 
-    /* size: 908px 681px; */ /* For 4x3 aspect */ 
-    margin: 0;
-}
-
-
+@page { margin: 0; }
 @media print {
-    .remark-slide-scaler {
-	width: 100% !important;
-	height: 100% !important;
-	transform: scale(1) !important;
-	top: 0 !important;
-	left: 0 !important;
-    }
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
 }
 
 
