@@ -14,6 +14,7 @@ output:
       highlightStyle: ir-black
       highlightLines: true
       countIncrementalSlides: false
+      beforeInit: "js/zoom.js"
 ---
 
 ```{r setup, include=FALSE}
@@ -713,3 +714,10 @@ networkData <- data.frame(nodes$name[links$source+1], nodes$name[links$target+1]
 # Plot
 simpleNetwork(networkData)
 ```
+
+<script>
+	document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
+		event.preventDefault();
+		zoom.to({ element: event.target });
+	} );
+</script>

@@ -254,12 +254,20 @@ a, a > code {
 
 /* Block math */ 
 .mjx-math {
-    font-size: 110%;
+    font-size: 180%;
 }
+
+/* Block math 
+   Only this is unique to block (display) math
+*/ 
+.MJXc-display {
+    font-size: 120% !important;
+}
+
 
 /* Inline math */ 
 .mjx-chtml {
-    font-size: 110%;
+    font-size: 100%; 
 }
 
 

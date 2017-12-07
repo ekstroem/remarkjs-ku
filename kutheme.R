@@ -1,3 +1,5 @@
+library(extrafont)
+loadfonts()
 library(ggplot2)
 library(ggthemr)
 
@@ -18,8 +20,6 @@ cLAUs <- define_palette(swatch = c('#eeeeee', # White
 
 ggthemr(cLAUs, layout="scientific", type = 'outer', spacing=1.2)
 
-library(extrafont)
-loadfonts()
 
 
 theme_xkcd <- function() {

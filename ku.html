@@ -4,7 +4,7 @@
     <title>Presentation Ninja</title>
     <meta charset="utf-8">
     <meta name="author" content="Claus Thorn Ekstrøm UCPH Biostatistics .small[ekstrom@sund.ku.dk]" />
-    <link href="libs/remark-css/example.css" rel="stylesheet" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/viz/viz.js"></script>
     <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
@@ -77,8 +77,14 @@ class: center
 
 # DiagrammeR
 
-<div id="htmlwidget-ec83bbdebbd1d8cbb20c" style="width:960px;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ec83bbdebbd1d8cbb20c">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+```
+## Warning: replacing previous import 'scales::viridis_pal' by
+## 'viridis::viridis_pal' when loading 'DiagrammeR'
+```
+
+<div id="htmlwidget-13d4d7dec9720f95db52" style="width:960px;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-13d4d7dec9720f95db52">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 
 
@@ -87,8 +93,8 @@ class: center
 
 # Flowcharts
 
-<div id="htmlwidget-d6a0a41cc6efec40858a" style="width:960px;height:100px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d6a0a41cc6efec40858a">{"x":{"diagram":"\ngraph LR\n  A-->B\n"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5c06c5762091445e5b2e" style="width:960px;height:100px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5c06c5762091445e5b2e">{"x":{"diagram":"\ngraph LR\n  A-->B\n"},"evals":[],"jsHooks":[]}</script>
 asd
 
 
@@ -99,8 +105,8 @@ class: center, middle, animated, fadeIn
 
 # DiagrammeR2
 
-<div id="htmlwidget-a747ca8b3f9669b8ea1b" style="width:960px;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a747ca8b3f9669b8ea1b">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3171ce3298f9ed174e49" style="width:960px;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3171ce3298f9ed174e49">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -390,8 +396,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div id="htmlwidget-236e85a295f00cbc8a39" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-236e85a295f00cbc8a39">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3eb970a932044afd98a1" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3eb970a932044afd98a1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -403,8 +409,8 @@ DT::datatable(
 )
 ```
 
-<div id="htmlwidget-0fb318c2e8da5c7aa840" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0fb318c2e8da5c7aa840">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-be48368dc68a2b6d3ca7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be48368dc68a2b6d3ca7">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -702,10 +708,12 @@ pairs(mtcars)
 
 # rets
  
-<div id="htmlwidget-82f4f2ccd71e6de419c5" style="width:720px;height:432px;" class="forceNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-82f4f2ccd71e6de419c5">{"x":{"links":{"source":[2,3,5,5,4,7,7,6,8,8,8],"target":[0,0,2,4,1,1,3,3,6,5,7],"value":[1,1,1,1,1,1,1,1,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Artikel  1","Artikel  2","Artikel  3","Artikel  4","Artikel  5","Artikel  6","Artikel  7","Artikel  8","Artikel  9"],"group":[1,1,1,1,1,1,1,1,1],"nodesize":[8,8,8,8,8,8,8,8,8]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal(['#3182bd'])","fontSize":7,"fontFamily":"serif","clickTextSize":17.5,"linkDistance":50,"linkWidth":"'1.5px'.toString()","charge":-30,"opacity":0.6,"zoom":false,"legend":false,"arrows":false,"nodesize":true,"radiusCalculation":"d.nodesize","bounded":false,"opacityNoHover":1,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5c6ac26d4002d4c4f0fe" style="width:720px;height:432px;" class="forceNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5c6ac26d4002d4c4f0fe">{"x":{"links":{"source":[2,3,5,5,4,7,7,6,8,8,8],"target":[0,0,2,4,1,1,3,3,6,5,7],"value":[1,1,1,1,1,1,1,1,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Artikel  1","Artikel  2","Artikel  3","Artikel  4","Artikel  5","Artikel  6","Artikel  7","Artikel  8","Artikel  9"],"group":[1,1,1,1,1,1,1,1,1],"nodesize":[8,8,8,8,8,8,8,8,8]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal(['#3182bd'])","fontSize":7,"fontFamily":"serif","clickTextSize":17.5,"linkDistance":50,"linkWidth":"'1.5px'.toString()","charge":-30,"opacity":0.6,"zoom":false,"legend":false,"arrows":false,"nodesize":true,"radiusCalculation":"d.nodesize","bounded":false,"opacityNoHover":1,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
+
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="js/zoom.js"></script>
 <script>var slideshow = remark.create({
 "ratio": "16:9",
 "slideNumberFormat": "%current%",
@@ -713,7 +721,23 @@ pairs(mtcars)
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+  })();</script>
+
+<script>
+document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
+	event.preventDefault();
+	zoom.to({ element: event.target });
+} );
+</script>
+
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -723,15 +747,5 @@ MathJax.Hub.Config({
 });
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
   </body>
 </html>
