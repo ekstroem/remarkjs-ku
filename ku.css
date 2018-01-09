@@ -353,6 +353,12 @@ a, a > code {
   width: 47%;
 }
 
+.pull-down {
+  bottom: 0;
+  position: fixed;
+}
+
+
 .pull-right ~ * {
   clear: both;
 }
