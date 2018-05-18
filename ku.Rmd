@@ -6,7 +6,7 @@ date: "Some day 2017, January 30th<br>.small[Slides @ [biostatistics.dk/talks/](
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ['default', 'ku.css', 'animate.min.css', 'printable.css']
+    css: ['default', 'ku.css', 'hygge', 'animate.min.css', 'printable.css']
     seal: true
     nature:
       ratio: '16:9'
@@ -20,7 +20,7 @@ output:
 ```{r setup, include=FALSE}
 #library(knitr)
 options(htmltools.dir.version = FALSE, cache=TRUE)
-#opts_chunk$set(dev.args=list(bg="transparent"), fig.width=15, fig.height=7)
+knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=16, fig.height=7)
 source("kutheme.R")
 ```
 
@@ -644,9 +644,37 @@ mpg_plot + theme_xkcd()
 #library(ggplot2)
 p <- ggplot(mtcars, aes(x=wt, y=mpg, color=factor(carb))) + geom_point(size=4) +
   ggtitle("Fuel Efficiency of 32 Cars") +
-  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
-  theme(text=element_text(size=20, family="Anime Ace 2.0 BB"))
+  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") # +
+#  theme(text=element_text(size=20, family="Anime Ace 2.0 BB"))
+#p + theme_transparent()
+
+
+p <- p +
+  theme(
+    text=element_text(size=20, family="Anime Ace 2.0 BB")
+    , panel.background = element_rect(fill = "#222222") # bg of the panel
+    , plot.background = element_rect(fill = "#222222") # bg of the plot
+    , axis.line = element_line(size=2, colour="#ffffff")
+#    , panel.grid.major = element_blank() # get rid of major grid
+#    , panel.grid.minor = element_blank() # get rid of minor grid
+#"    , legend.background = element_rect(fill = "transparent") # get rid of legend bg
+#    , legend.box.background = element_rect(fill = "transparent") # get rid of legend panel bg
+  )
 p
+
+#theme(
+#    panel.background = element_rect(fill = "transparent", colour=NA) # bg of the panel
+#    , plot.background = element_rect(fill = "transparent", colour = NA) # bg of the plot
+#    , panel.grid.major = element_blank() # get rid of major grid
+#    , panel.grid.minor = element_blank() # get rid of minor grid
+#    , legend.background = element_rect(fill = "transparent") # get rid of legend bg
+#    , legend.box.background = element_rect(fill = "transparent") # get rid of legend panel bg
+#  )
+  
+#  theme(panel.background = element_rect(fill = "transparent", colour = NA),
+#          plot.background = element_rect(fill = "transparent",colour = NA)
+          
+#          )
 ```
 
 ---

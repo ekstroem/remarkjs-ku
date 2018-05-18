@@ -58,6 +58,10 @@ tbody tr:nth-child(odd) {   /* Zebra stipes for tables */
     background-color: #444;
 }
 
+tbody tr:nth-child(even) {   /* Zebra stipes for tables */
+    background-color: #999;
+}
+
 table td  { padding: 0px 16px; }
 
 
@@ -102,23 +106,6 @@ video#videobg {
     filter: blur(5px) opacity(.3);
     /*    opacity: 0.5; */
 }
-
-
-/**************
- *
- * Font size and colours
- *
- **************/
-
-
-.large { font-size: 130% }
-.footnotesize { font-size: 85% }
-.small { font-size: 70% }
-
-.black { color: black; }
-
-.bold { font-weight: bold; }
-.bolder { font-weight: bolder; }
 
 
 /**************
