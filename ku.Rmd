@@ -1,7 +1,7 @@
 ---
 title: "Presentation Ninja"
-subtitle: "⚔<br/>with xaringan"
-author: "Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[ekstrom@sund.ku.dk]"
+subtitle: "with xaringan"
+author: "Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[ekstrom@sund.ku.dk ]"
 date: "Some day 2017, January 30th<br>.small[Slides @ [biostatistics.dk/talks/](www.biostatistics.dk/talks/)]"
 output:
   xaringan::moon_reader:
@@ -106,14 +106,6 @@ grViz("
 
 ---
 
-
-
-$$
-\sum_{j=1}^K{\frac{p_i}{p_j}}
-$$
-
-But, these ones don't
-$$\sum_j^K{\frac{p_{ij}}{p_j}}$$
 
 $$\sum_{j=1}^K{\frac{p_{ij}}{p_j}}$$
 
@@ -608,26 +600,6 @@ pairs(mtcars)
 ---
 
 ```{r echo=FALSE,warning=FALSE}
-#library(ggplot2)
-#library(ggthemr)
-
-#claus <- define_palette(swatch = c('#eeeeee', # White
-#                                   "#8282ff", # Blue b9b9ff
-#                                   "#ff7979", # Red
-#                                   '#f2f200', # Yellow
-#                                   "#0bff06", # Green 
-#                                   "#eca8e5", # Magenta 
-#                                   "#ffad5b"  # Brownish
-#), 
-#  gradient = c(lower = 'red', upper = 'green'),
-#                        background = "transparent", 
-#                        text = c("#eeeeee", "#eeeeee"), 
-#                        line = c("#ee1e1e", "#6e6e6e"), # Axis lines 
-#                        gridline = "#434343") # Gridlines
-
-
-#ggthemr(claus, layout="scientific", type = 'outer', spacing=1.2)
-
 mpg_plot <- ggplot(mpg[mpg$drv != '4', ], aes(factor(cyl), cty, fill = drv)) + 
   geom_boxplot() + labs(x = 'Cylinders', y = 'City MPG', fill = 'Drive Type') +
   theme(legend.position = 'bottom')
@@ -648,19 +620,7 @@ p <- ggplot(mtcars, aes(x=wt, y=mpg, color=factor(carb))) + geom_point(size=4) +
 #  theme(text=element_text(size=20, family="Anime Ace 2.0 BB"))
 #p + theme_transparent()
 
-
-p <- p +
-  theme(
-    text=element_text(size=20, family="Anime Ace 2.0 BB")
-    , panel.background = element_rect(fill = "#222222") # bg of the panel
-    , plot.background = element_rect(fill = "#222222") # bg of the plot
-    , axis.line = element_line(size=2, colour="#ffffff")
-#    , panel.grid.major = element_blank() # get rid of major grid
-#    , panel.grid.minor = element_blank() # get rid of minor grid
-#"    , legend.background = element_rect(fill = "transparent") # get rid of legend bg
-#    , legend.box.background = element_rect(fill = "transparent") # get rid of legend panel bg
-  )
-p
+p + theme_xkcd()
 
 #theme(
 #    panel.background = element_rect(fill = "transparent", colour=NA) # bg of the panel
@@ -742,6 +702,12 @@ networkData <- data.frame(nodes$name[links$source+1], nodes$name[links$target+1]
 # Plot
 simpleNetwork(networkData)
 ```
+
+---
+
+class: center, middle
+
+# `r fontawesome::fa('twitter', fill = "steelblue")` @ClausEkstrom
 
 <script>
 	document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
