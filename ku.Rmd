@@ -1,12 +1,12 @@
 ---
 title: "Presentation Ninja"
-subtitle: "with xaringan"
+subtitle: '`r fontawesome::fa("twitter", fill = "steelblue")` @ClausEkstrom'
 author: "Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[ekstrom@sund.ku.dk ]"
 date: "Some day 2017, January 30th<br>.small[Slides @ [biostatistics.dk/talks/](www.biostatistics.dk/talks/)]"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ['default', 'ku.css', 'hygge', 'animate.min.css', 'printable.css']
+    css: ['default']
     seal: true
     nature:
       ratio: '16:9'
@@ -106,16 +106,12 @@ grViz("
 
 ---
 
+header1 | header2 | header3
+-------|---------|---------
+`fun1` | `code1` | text not formatted as code
+`fun2` | `code2` | another
+`fun3` | `code3` | and again
 
-$$\sum_{j=1}^K{\frac{p_{ij}}{p_j}}$$
-
-
-
-$$\ell(\pi) = \sum_{i = 1}^{K}\sum_{j = 1}^{K} [w_{ij}(\log \pi_i - \log(\pi_i + \pi_j))].$$
-
-and
-
-$$\pi_i^{(n+1)} = \frac{a - 1 + W_i}{b + \sum_{j=1}^K \frac{n_{ij}}{\pi_i^{(n)} + \pi_j^{(n)}}},$$
 
 ---
 

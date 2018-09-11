@@ -55,11 +55,12 @@ table th {
 }
 
 tbody tr:nth-child(odd) {   /* Zebra stipes for tables */
-    background-color: #444;
+    background-color: #444;    
 }
 
 tbody tr:nth-child(even) {   /* Zebra stipes for tables */
     background-color: #999;
+    color: #000;
 }
 
 table td  { padding: 0px 16px; }
