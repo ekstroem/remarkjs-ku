@@ -46,5 +46,7 @@ theme_xkcd <- function() {
 }
 
 
-
+xkcd_line <- function(...) {
+    geom_line(...)
+}
 

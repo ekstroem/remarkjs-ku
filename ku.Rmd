@@ -6,7 +6,7 @@ date: "Some day 2017, January 30th<br>.small[Slides @ [biostatistics.dk/talks/](
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ['default']
+    css: ['default', 'ku.css', 'hygge']
     seal: true
     nature:
       ratio: '16:9'
