@@ -17,11 +17,11 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans');
 
 body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
-       background-color:#222;
+       background-color:#16161d;
      }
 
 /* Default background colour, and font size */
-.remark-slide-content{ background-color: #222;
+.remark-slide-content{ background-color: #16161d;
 		       font-family: 'Fira Sans', 'Yanone Kaffeesatz';
 		       color: #fff;
 		       font-size: 220%;    /* Regular text */
@@ -37,7 +37,7 @@ body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino
 
 /* Change the overall background colour _outside_ the actual slides */
 body:-webkit-full-screen {
-    background: #222;
+    background: #16161d;
 }
 
 
@@ -296,7 +296,7 @@ a, a > code {
     background-image: url(kulogowhiteq.png);
     background-position: 100% 100%;
     background-size: 30%;
-    background-color:#222;
+    background-color:#16161d;
     color: #fff;
 }
 

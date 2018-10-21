@@ -33,7 +33,7 @@ theme_xkcd <- function() {
              ) +
         theme(text = element_text(size=32, family="Unmasked BB", colour="#eeeeee"),   # Humor Sans
               line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
-              rect = element_rect(fill = "#222222", colour = "#eeeeee", size = 0.5, linetype = 1),
+              rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
               panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
               plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
 
@@ -41,7 +41,7 @@ theme_xkcd <- function() {
               axis.line = element_line(size=2, colour="#dddddd"),  # Colour of axis lines
 
               panel.grid = element_line(size=1, colour="#434343"), # Gridlines inside picture
-              legend.key = element_rect(fill="#222222", colour=NA)              
+              legend.key = element_rect(fill="#16161d", colour=NA)              
          )
 }
 
