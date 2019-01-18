@@ -31,7 +31,7 @@ scale_colour_discrete <- function(...) scale_colour_manual(values=ku_colours)
 theme_xkcd <- function() {
     ggplot2::theme_grey(
              ) +
-        theme(text = element_text(size=32, family="Unmasked BB", colour="#eeeeee"),   # Humor Sans
+        theme(text = element_text(size=32, family="Komika Hand", colour="#eeeeee"),   # Comic book font with ÆØÅ
               line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
               rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
               panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel

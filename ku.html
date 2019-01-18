@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Presentation Ninja</title>
+    <title>Mathematics of over diagnosis</title>
     <meta charset="utf-8">
     <meta name="author" content="Claus Thorn Ekstrøm UCPH Biostatistics .small[ekstrom@sund.ku.dk ]" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/viz/viz.js"></script>
     <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
     <script src="libs/grViz-binding/grViz.js"></script>
+    <script src="libs/pymjs/pym.v1.js"></script>
+    <script src="libs/widgetframe-binding/widgetframe.js"></script>
     <script src="libs/d3/d3.min.js"></script>
     <script src="libs/dagre/dagre-d3.min.js"></script>
     <link href="libs/mermaid/dist/mermaid.css" rel="stylesheet" />
@@ -31,18 +34,16 @@
     <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
     <script src="libs/crosstalk/js/crosstalk.min.js"></script>
     <script src="libs/forceNetwork-binding/forceNetwork.js"></script>
+    <link rel="stylesheet" href="ku.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Presentation Ninja
-## <svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 512 512">
-<path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
-</svg>
-<p><span class="citation">@ClausEkstrom</span></p>
-### Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[<a href="mailto:ekstrom@sund.ku.dk">ekstrom@sund.ku.dk</a> ]
-### Some day 2017, January 30th<br>.small[Slides @ <a href="www.biostatistics.dk/talks/">biostatistics.dk/talks/</a>]
+# Mathematics of over diagnosis
+## Subtitle
+### Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[<a href="mailto:ekstrom@sund.ku.dk" class="email">ekstrom@sund.ku.dk</a> ]
+### Some day 2019<br><svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> <span class="citation">@ClausEkstrom</span> <br> .small[Slides: <a href="www.biostatistics.dk/talks/">biostatistics.dk/talks/</a>]
 
 ---
 
@@ -52,6 +53,8 @@ class: center, middle, inverse, title-slide
 class: middle, sundlogo
 
 # Classes
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 512 512"&gt;&lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/&gt;&lt;/svg&gt; @ClausEkstrom
 
 The `class` list can add a class to the entire slide. Possibilities are
 
@@ -79,9 +82,13 @@ class: center
 
 # DiagrammeR
 
-<div id="htmlwidget-ac37e39ce19f6602b7eb" style="width:960px;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ac37e39ce19f6602b7eb">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-15d96475eba33e2585e4" style="width:960px;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-15d96475eba33e2585e4">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
+---
+
+<div id="htmlwidget-1c3d14c2b67ecf259720" style="width:100%;height:504px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1c3d14c2b67ecf259720">{"x":{"url":"ku_files/figure-html//widgets/widget_test.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -89,8 +96,8 @@ class: center
 
 # Flowcharts
 
-<div id="htmlwidget-7cfb6832d9d7c8206e50" style="width:960px;height:100px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7cfb6832d9d7c8206e50">{"x":{"diagram":"\ngraph LR\n  A-->B\n"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-68a11b23a901e24272de" style="width:960px;height:100px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-68a11b23a901e24272de">{"x":{"diagram":"\ngraph LR\n  A-->B\n"},"evals":[],"jsHooks":[]}</script>
 asd
 
 
@@ -101,8 +108,8 @@ class: center, middle, animated, fadeIn
 
 # DiagrammeR2
 
-<div id="htmlwidget-46018bdc84ee647e7eaa" style="width:960px;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-46018bdc84ee647e7eaa">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ab72e75ad679a40f21a8" style="width:960px;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ab72e75ad679a40f21a8">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -380,8 +387,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div id="htmlwidget-3f2d5a485b33f1c9d484" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3f2d5a485b33f1c9d484">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b39eb32de8fa29f90fcc" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b39eb32de8fa29f90fcc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -393,8 +400,8 @@ DT::datatable(
 )
 ```
 
-<div id="htmlwidget-e976ffa19b12eade09da" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e976ffa19b12eade09da">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-cd4b62a184f071adea70" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cd4b62a184f071adea70">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -692,8 +699,8 @@ pairs(mtcars)
 
 # rets
  
-<div id="htmlwidget-b1245619524a48c04c09" style="width:720px;height:432px;" class="forceNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b1245619524a48c04c09">{"x":{"links":{"source":[2,3,5,5,4,7,7,6,8,8,8],"target":[0,0,2,4,1,1,3,3,6,5,7],"value":[1,1,1,1,1,1,1,1,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Artikel  1","Artikel  2","Artikel  3","Artikel  4","Artikel  5","Artikel  6","Artikel  7","Artikel  8","Artikel  9"],"group":[1,1,1,1,1,1,1,1,1],"nodesize":[8,8,8,8,8,8,8,8,8]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal(['#3182bd'])","fontSize":7,"fontFamily":"serif","clickTextSize":17.5,"linkDistance":50,"linkWidth":"'1.5px'.toString()","charge":-30,"opacity":0.6,"zoom":false,"legend":false,"arrows":false,"nodesize":true,"radiusCalculation":"d.nodesize","bounded":false,"opacityNoHover":1,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1ad43129da021648591c" style="width:720px;height:432px;" class="forceNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1ad43129da021648591c">{"x":{"links":{"source":[2,3,5,5,4,7,7,6,8,8,8],"target":[0,0,2,4,1,1,3,3,6,5,7],"value":[1,1,1,1,1,1,1,1,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Artikel  1","Artikel  2","Artikel  3","Artikel  4","Artikel  5","Artikel  6","Artikel  7","Artikel  8","Artikel  9"],"group":[1,1,1,1,1,1,1,1,1],"nodesize":[8,8,8,8,8,8,8,8,8]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal(['#3182bd'])","fontSize":7,"fontFamily":"serif","clickTextSize":17.5,"linkDistance":50,"linkWidth":"'1.5px'.toString()","charge":-30,"opacity":0.6,"zoom":false,"legend":false,"arrows":false,"nodesize":true,"radiusCalculation":"d.nodesize","bounded":false,"opacityNoHover":1,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -709,7 +716,6 @@ class: center, middle
 &lt;/script&gt;
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script src="js/zoom.js"></script>
 <script>var slideshow = remark.create({
 "ratio": "16:9",
 "slideNumberFormat": "%current%",
@@ -750,7 +756,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

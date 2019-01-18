@@ -1,8 +1,8 @@
 ---
-title: "The mathematics of over diagnosis"
+title: "Mathematics of over diagnosis"
 subtitle: 'Subtitle'
 author: "Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[ekstrom@sund.ku.dk ]"
-date: 'Some day 2019, January 30th<br>`r fontawesome::fa("twitter", fill = "steelblue")` @ClausEkstrom <br> .small[Slides: [biostatistics.dk/talks/](www.biostatistics.dk/talks/)]'
+date: 'Some day 2019<br>`r fontawesome::fa("twitter", fill = "steelblue")` @ClausEkstrom <br> .small[Slides: [biostatistics.dk/talks/](www.biostatistics.dk/talks/)]'
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -67,6 +67,20 @@ grViz("
   }")
 ```
 
+---
+
+```{r test,echo=FALSE}
+
+library(DiagrammeR)
+m <- mermaid("graph TD;
+
+		   A-->B;
+		   A-->C;
+		   B-->D;
+		   C-->D
+		   ")
+widgetframe::frameWidget(m)
+```
 
 
 ---
@@ -681,7 +695,7 @@ p + theme_xkcd() ## + geom_line(aes(y=10), position = position_jitter(h = 0.15),
 
 ---
 
-# rets
+# network3d
  
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=6}
 
