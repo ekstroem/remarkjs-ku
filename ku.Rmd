@@ -69,18 +69,21 @@ grViz("
 
 ---
 
-```{r test,echo=FALSE}
+# This is a normal slide
 
-library(DiagrammeR)
-m <- mermaid("graph TD;
+I'm adding a line here that is so long that it will flow to the next line.
 
-		   A-->B;
-		   A-->C;
-		   B-->D;
-		   C-->D
-		   ")
-widgetframe::frameWidget(m)
-```
+$$y = \pm \sqrt[k]{1-x^k}$$
+
+Whaat happens here . And how does it look inline is I type $y = \pm \sqrt[k]{1-x^k}$ as part of something.
+
+Now I add some `code=12` inside the line
+
+---
+
+# This is another slide
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 
 
 ---

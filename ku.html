@@ -10,8 +10,6 @@
     <script src="libs/viz/viz.js"></script>
     <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
     <script src="libs/grViz-binding/grViz.js"></script>
-    <script src="libs/pymjs/pym.v1.js"></script>
-    <script src="libs/widgetframe-binding/widgetframe.js"></script>
     <script src="libs/d3/d3.min.js"></script>
     <script src="libs/dagre/dagre-d3.min.js"></script>
     <link href="libs/mermaid/dist/mermaid.css" rel="stylesheet" />
@@ -82,13 +80,26 @@ class: center
 
 # DiagrammeR
 
-<div id="htmlwidget-15d96475eba33e2585e4" style="width:960px;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-15d96475eba33e2585e4">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3eb458a6c23b24428b45" style="width:960px;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3eb458a6c23b24428b45">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
-<div id="htmlwidget-1c3d14c2b67ecf259720" style="width:100%;height:504px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1c3d14c2b67ecf259720">{"x":{"url":"ku_files/figure-html//widgets/widget_test.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+# This is a normal slide
+
+I'm adding a line here that is so long that it will flow to the next line.
+
+`$$y = \pm \sqrt[k]{1-x^k}$$`
+
+Whaat happens here . And how does it look inline is I type `\(y = \pm \sqrt[k]{1-x^k}\)` as part of something.
+
+Now I add some `code=12` inside the line
+
+---
+
+# This is another slide
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 
 
 ---
@@ -96,8 +107,8 @@ class: center
 
 # Flowcharts
 
-<div id="htmlwidget-68a11b23a901e24272de" style="width:960px;height:100px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-68a11b23a901e24272de">{"x":{"diagram":"\ngraph LR\n  A-->B\n"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a4de2f5150d01be98511" style="width:960px;height:100px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a4de2f5150d01be98511">{"x":{"diagram":"\ngraph LR\n  A-->B\n"},"evals":[],"jsHooks":[]}</script>
 asd
 
 
@@ -108,8 +119,8 @@ class: center, middle, animated, fadeIn
 
 # DiagrammeR2
 
-<div id="htmlwidget-ab72e75ad679a40f21a8" style="width:960px;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ab72e75ad679a40f21a8">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8c1891eb6a3154d31ca5" style="width:960px;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8c1891eb6a3154d31ca5">{"x":{"diagram":"\n  digraph {\n    bgcolor = \"transparent\"\n    layout = twopi\n    node [shape = circle, fontcolor = \"white\", color = \"white\"]\n    edge [color = \"white\"]\n    A -> {B C D}\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -387,8 +398,8 @@ library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div id="htmlwidget-b39eb32de8fa29f90fcc" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b39eb32de8fa29f90fcc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0001323625d6e624290f" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0001323625d6e624290f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -400,8 +411,8 @@ DT::datatable(
 )
 ```
 
-<div id="htmlwidget-cd4b62a184f071adea70" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cd4b62a184f071adea70">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-205c2f0bef09c474d4d1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-205c2f0bef09c474d4d1">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -697,10 +708,10 @@ pairs(mtcars)
 
 ---
 
-# rets
+# network3d
  
-<div id="htmlwidget-1ad43129da021648591c" style="width:720px;height:432px;" class="forceNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1ad43129da021648591c">{"x":{"links":{"source":[2,3,5,5,4,7,7,6,8,8,8],"target":[0,0,2,4,1,1,3,3,6,5,7],"value":[1,1,1,1,1,1,1,1,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Artikel  1","Artikel  2","Artikel  3","Artikel  4","Artikel  5","Artikel  6","Artikel  7","Artikel  8","Artikel  9"],"group":[1,1,1,1,1,1,1,1,1],"nodesize":[8,8,8,8,8,8,8,8,8]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal(['#3182bd'])","fontSize":7,"fontFamily":"serif","clickTextSize":17.5,"linkDistance":50,"linkWidth":"'1.5px'.toString()","charge":-30,"opacity":0.6,"zoom":false,"legend":false,"arrows":false,"nodesize":true,"radiusCalculation":"d.nodesize","bounded":false,"opacityNoHover":1,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ba533bf69b7c808cab9d" style="width:720px;height:432px;" class="forceNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ba533bf69b7c808cab9d">{"x":{"links":{"source":[2,3,5,5,4,7,7,6,8,8,8],"target":[0,0,2,4,1,1,3,3,6,5,7],"value":[1,1,1,1,1,1,1,1,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Artikel  1","Artikel  2","Artikel  3","Artikel  4","Artikel  5","Artikel  6","Artikel  7","Artikel  8","Artikel  9"],"group":[1,1,1,1,1,1,1,1,1],"nodesize":[8,8,8,8,8,8,8,8,8]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal(['#3182bd'])","fontSize":7,"fontFamily":"serif","clickTextSize":17.5,"linkDistance":50,"linkWidth":"'1.5px'.toString()","charge":-30,"opacity":0.6,"zoom":false,"legend":false,"arrows":false,"nodesize":true,"radiusCalculation":"d.nodesize","bounded":false,"opacityNoHover":1,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -715,6 +726,7 @@ class: center, middle
 	} );
 &lt;/script&gt;
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "ratio": "16:9",
@@ -726,16 +738,57 @@ class: center, middle
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
 
 <script>
 (function() {
-  var i, text, code, codes = document.getElementsByTagName('code');
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
   for (i = 0; i < codes.length;) {
     code = codes[i];
     if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
@@ -749,7 +802,8 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     i++;
   }
-})();
+};
+slideshow._releaseMath(document);
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
