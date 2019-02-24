@@ -14,7 +14,6 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
 /* CE Added my favorite fonts */
-/* @import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans'); */
 @import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans');
 
 body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
@@ -23,10 +22,8 @@ body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino
 
 /* Default background colour, and font size */
 .remark-slide-content{ background-color: #16161d;
-		       font-family: 'Fira Sans', 'Yanone Kaffeesatz';
 		       color: #fff;
 		       font-size: 220%;    /* Regular text */
-/*		       font-family: 'Alegreya Sans', sans-serif; */
 		       font-family: 'Alegreya', serif;		       
 		     }
 
@@ -117,7 +114,6 @@ video#videobg {
  *
  **************/
 
-/*  */
 
 .rotate-left>img {
     -webkit-transform: rotate(-2deg);
@@ -185,7 +181,6 @@ video#videobg {
 
 
 h1, h2, h3 {
-    font-family: 'Yanone Kaffeesatz';
     font-family: 'Alegreya Sans', sans-serif; 
     font-weight: normal;
     font-weight: 600;
@@ -236,13 +231,23 @@ a, a > code {
  *  Normal code output 
  *  Note that .remark-code is also controlled by blocked mathematics
  */
-.remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+.remark-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+				    font-size: 70%;
+				  }
+
+.remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
 				    font-size: 75%;
 				  }
 
 .remark-code-line-highlighted     { background-color: #901A1E; 
                                   }  /* Color coding of highlighted code */
 
+
+/*****
+ *
+ * None of this is used but saved for later
+ * 
+ **********/
 
 /* Block math * / 
 .mjx-math {
@@ -266,9 +271,7 @@ a, a > code {
 
 
 .inverse {
-    /*    background-color: #A72822; */
     background-color: #901A1E;    
-    /*     color: #777872; */
     color: #f3f3f3;
     text-shadow: 0 0 20px #333;
 }
@@ -281,9 +284,7 @@ a, a > code {
 
 
 .white {
-    //    background-color: #A72822;
     background-color: #BBBBBB;
-    //    color: #777872;
     color: #030303;
     text-shadow: 0 0 20px #333;
 }
@@ -368,8 +369,21 @@ img {
  */
 
 .remark-slide-content {
-  padding-top: 0em;
-  padding-right: 2.5em;
-  padding-bottom: 0.5em;
-  padding-left: 2.5em;
+  padding-top: 0.4em;
+  padding-right: 2.4em;
+  padding-bottom: 0.4em;
+  padding-left: 2.4em;
+}
+
+
+
+/************
+ * 
+ * 
+ * 
+ ************/
+
+
+.hljs-ir-black .hljs {
+    border-radius: 15px;
 }
