@@ -31,14 +31,16 @@ scale_colour_discrete <- function(...) scale_colour_manual(values=ku_colours)
 theme_xkcd <- function() {
     ggplot2::theme_grey(
              ) +
-        theme(text = element_text(size=32, family="Komika Hand", colour="#eeeeee"),   # Comic book font with ÆØÅ
+        theme(text = element_text(size=34, family="Kalam Bold", colour="#eeeeee"),   # Handwritten font with ÆØÅ
               line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
               rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
               panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
               plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
 
-              axis.text = element_text(colour="#eeeeee", size=32),          # Colour of axis labels
-              axis.line = element_line(size=2, colour="#dddddd"),  # Colour of axis lines
+              axis.text = element_text(colour="#eeeeee", size=34),   # Colour of axis labels
+              axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
+
+#              axis.text.y=element_text(vjust=5, hjust=5),
 
               panel.grid = element_line(size=1, colour="#434343"), # Gridlines inside picture
               legend.key = element_rect(fill="#16161d", colour=NA)              

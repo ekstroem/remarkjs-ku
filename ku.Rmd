@@ -43,6 +43,7 @@ The `class` list can add a class to the entire slide. Possibilities are
 
 
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/12/We_Can_Do_It%21.jpg)
+background-size: 100%
 
 ???
 
@@ -640,32 +641,35 @@ mpg_plot + theme_xkcd()
 
 ```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
 #library(extrafont)
-#loadfonts()
-#library(ggplot2)
 p <- ggplot(mtcars, aes(x=wt, y=mpg, color=factor(carb))) + geom_point(size=4) +
   ggtitle("Fuel Efficiency of 32 Cars") +
-  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") # +
+  xlab("Weight (x1000 lb) ") + ylab("Miles per Gallon æøå") # +
 #  theme(text=element_text(size=20, family="Anime Ace 2.0 BB"))
 #p + theme_transparent()
 
 p + theme_xkcd()
 
-#theme(
-#    panel.background = element_rect(fill = "transparent", colour=NA) # bg of the panel
-#    , plot.background = element_rect(fill = "transparent", colour = NA) # bg of the plot
-#    , panel.grid.major = element_blank() # get rid of major grid
-#    , panel.grid.minor = element_blank() # get rid of minor grid
-#    , legend.background = element_rect(fill = "transparent") # get rid of legend bg
-#    , legend.box.background = element_rect(fill = "transparent") # get rid of legend panel bg
-#  )
-  
-#  theme(panel.background = element_rect(fill = "transparent", colour = NA),
-#          plot.background = element_rect(fill = "transparent",colour = NA)
-          
-#          )
 ```
 
 ---
+
+
+# Graphics - ggplot2
+
+```{r echo=FALSE,message=FALSE, warning=FALSE, error=FALSE}
+#library(extrafont)
+p <- ggplot(mtcars, aes(x=wt, y=-mpg, color=factor(carb))) + geom_point(size=4) +
+  ggtitle("Fuel Efficiency of 32 Cars") +
+  xlab("Weight (x---1000 lb) ") + ylab("Miles per Gallon æøå") # +
+#  theme(text=element_text(size=20, family="Anime Ace 2.0 BB"))
+#p + theme_transparent()
+
+p + theme_xkcd()
+
+```
+
+---
+
 
 # Francisca 2
 
