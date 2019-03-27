@@ -188,14 +188,15 @@ h1, h2, h3 {
 
 a, a > code {
   /* Link colours */
-  color: rgb(144, 26, 30);
+/*  color: rgb(144, 26, 30);  KU colour. Possibly too dark*/
+  color: rgb(170, 52, 56);
   text-decoration: none;
 }
 
 .footnote {
   position: absolute;
   bottom: 3em;
-  font-size: 90%;
+  font-size: 71%;
 }
 
 
