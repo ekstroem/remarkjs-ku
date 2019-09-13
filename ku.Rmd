@@ -2,7 +2,7 @@
 title: "Mathematics of over diagnosis"
 subtitle: 'Subtitle'
 author: "Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[ekstrom@sund.ku.dk ]"
-date: 'Some day 2019<br>`r fontawesome::fa("twitter", fill = "steelblue")` @ClausEkstrom <br> .small[Slides: [biostatistics.dk/talks/](www.biostatistics.dk/talks/)]'
+date: 'Some day 2019<br>`r fontawesome::fa("twitter", fill = "steelblue")` @ClausEkstrom <br> .small[Slides: [biostatistics.dk/talks/](https://www.biostatistics.dk/talks/)]'
 output:
   xaringan::moon_reader:
     lib_dir: libs
