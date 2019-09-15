@@ -55,6 +55,8 @@ theme_xkcd <- function() {
 }
 
 
+update_geom_defaults("text", list(family="Kalam Bold"))
+
 xkcd_line <- function(...) {
     geom_line(...)
 }
