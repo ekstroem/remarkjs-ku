@@ -159,7 +159,7 @@ class: center, middle, animated, lightSpeedIn
 ### /ʃæ.'riŋ.ɡæn/
 
 | wqwe | qweqwe |
-|------+--------|
+|------|--------|
 | 123  | 123 |
 | 123  | 321  |
 
