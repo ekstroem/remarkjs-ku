@@ -81,7 +81,7 @@ table td  { padding: 0px 16px; }
 }
 
 .sundlogo {
-    background-image: url(sundlogowhiteq.png);
+/*    background-image: url(sundlogowhiteq.png);*/
     background-position: 100% 100%;
     background-size: 30%;
 }
