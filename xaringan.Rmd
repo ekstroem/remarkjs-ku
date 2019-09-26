@@ -1,0 +1,451 @@
+---
+title: "Xaringan shenanigans"   # The title
+author: 'Claus Thorn Ekstrøm<br>UCPH Biostatistics<br>.small[ekstrom@sund.ku.dk]<br>`r fontawesome::fa("twitter", fill = "steelblue")` @ClausEkstrom'
+date: "Copenhagen R users<br>September 26th, 2019<br>.small[Slides @ [biostatistics.dk/talks/](https://www.biostatistics.dk/talks/)]"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ['default', 'hygge', 'ku.css', 'tweak.css', 'animate.min.css']
+    seal: true
+    self_contained: false
+    nature:
+      ratio: '16:9'
+      slideNumberFormat: '%current%' 
+      highlightStyle: ir-black
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+#library(knitr)
+options(htmltools.dir.version = FALSE, cache=TRUE)
+#opts_chunk$set(dev.args=list(bg="transparent"), fig.width=15, fig.height=7)
+source("~/ku/praesentationer/CPH-Rusers2019/kutheme.R")
+```
+
+## Simple, elegant, Rmarkdown presentations
+
+`xaringan` provides access to `remark.js` - an HTML5 markdown presentation framework.
+
+```{r eval=FALSE}
+devtools::install_github('yihui/xaringan')
+```
+
+.pull-left[Latest version is 0.12.1]
+.pull-right[
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("pics/xaringan.png")
+```
+
+]
+
+---
+
+# Overview
+
+
+*   Quick tutorial
+*   Distribution
+*   Advanced stuff
+*   Tweak
+
+
+---
+
+class: inverse, middle, center
+
+# Quick tutorial
+
+---
+
+## Your first presentation
+
+.right-column[
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("pics/xaringantemplate.png")
+```
+]
+.left-column[
+.footnotesize[
+
+New R markdown -> "`presentation ninja`" template.
+
+Click `Knit` to compile it;
+
+Also serves as a user manual!
+]
+]
+
+
+---
+
+## Useful keys
+
+Knit the presentation from RStudio: .button[cmd]+.button[shift]+.button[k]
+
+In presentation
+
+.pull-left[
+*   .button[H] - help
+*   .button[M] - mirrored   ( .button[C]  clone)
+*   .button[F] - full screen
+]
+.pull-right[
+*   .button[B] - blank presentation
+*   .button[P] - presentation mode
+*   .button[T] - restart timer
+]
+
+---
+
+## Writing slides
+
+Write everything in [R Markdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+
+*   Use triple dashes `---` for new slides
+*   Use double dashes `--` for incremental content
+*   Use `???` for presentation notes
+
+*All* should start in first column. And *no* spaces after!
+
+Output is HTML so can always add standard HTML codes directly (though usually not necessary).
+
+???
+
+Here are my presentation notes
+
+---
+
+
+## Math Expressions
+
+Write LaTeX math expressions inside a pair of dollar signs, e.g. &#36;\alpha+\beta$ renders $\alpha+\beta$. 
+
+Display style with double dollars (`\begin{equation}` ... `\end{equation}`):
+
+```
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+``` 
+
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+
+
+*   The source code of a LaTeX math expression should be in one line;
+*   There **should not** be spaces after the opening `$` or before the closing `$`.
+
+---
+
+# R code - R markdown
+
+Wrap R code in triple backticks: `  ```{r} ... ```  `
+
+Highlight code lines with comment `#<<` (normal comments *before* `#<<`) 
+
+```{r}
+fit <- lm(dist ~ speed, data = cars) # Not cars again
+coef(summary(fit))  # Here we extract summary table  #<<
+```
+
+---
+
+# R Plots - just "work"
+
+```{r cars, fig.height=3, fig.width=10, dev='svg'}
+plot(cars, pch = 19, col = 'darkgray', las = 1)
+abline(fit, lwd = 3, col="red")
+```
+
+Use chunk arguments to change `fig.height` and `fig.width`.
+
+---
+
+# Tables
+
+.pull-left[
+
+Type in tables manually
+
+```
+| Tom | Jerry |
+|------|--------|
+| 123  | 123    |
+| 123  | 321    |
+```
+
+| Tom | Jerry |
+|------|--------|
+| 123  | 123    |
+| 123  | 321    |
+
+
+]
+.pull-right[
+Or use R:
+
+.footnotesize[
+```{r}
+knitr::kable(head(trees), 
+             format='markdown')
+```
+]
+
+]
+
+
+---
+
+# Include graphics
+
+
+```{r}
+knitr::include_graphics("pics/horoscopes.jpeg")
+```
+
+
+---
+
+class: inverse, middle, center
+
+
+# Distribution
+
+
+---
+
+# Distribute HTML
+
+Copy full directory online
+
+```
+ 17302 Sep 19 10:18 xaringan.html
+   288 Sep 19 10:18 libs
+ 20937 Sep 19 10:18 xaringan.Rmd
+   480 Sep 19 09:31 pics
+    34 Sep 11 12:05 kutheme.R
+  7123 Sep 11 00:38 ku.css
+    96 Sep  7 11:50 xaringan_files
+ 52789 Aug 12 22:50 animate.min.css
+101312 Dec  3  2016 kulogowhiteq.png
+```
+
+Or add `self_contained: true` to YAML (more later). Slow!
+
+
+---
+
+# Converting to pdf
+
+If Google Chrome/Chromium is installed then you can 
+
+1.  print to pdf from chrome
+2.  Use the `pagedown::chrome_print()` function from `pagedown`.
+
+```{r eval=FALSE}
+# Either use the raw Rmd-file or resulting HTML
+pagedown::chrome_print("path/to/slides.Rmd")
+pagedown::chrome_print("path/to/slides.html")
+```
+
+Alternative: use [`decktape`](https://github.com/astefanutti/decktape):
+
+```{r eval=FALSE}
+system("`npm bin`/decktape remark slides.html slides.pdf") # decktape v2.5.0
+```
+
+
+---
+
+class: inverse, middle, center
+
+# Advanced stuff
+
+---
+
+## The YAML
+
+.scriptsize[
+
+```yaml
+---
+title: "A Cool Presentation"  # The title
+author: "Donald Duck"
+date: "Today is yesterday's tomorrow"
+output:
+  xaringan::moon_reader:                        # wrapper for remark.js output format
+    lib_dir: libs                               # Directory to store extra libs
+    css: ['default', 'default-fonts', 'hygge']  # Vector of css paths. Order matters!
+    self_contained: false                       # Produce self-contained html
+    seal: true                                  # Automatic title slide from YAML
+    nature:                                     # Configurations passed to remark.js
+      autoplay: 30000                           # Autoplay slides. 30 seconds
+      ratio: '16:9'                             # Display ratio (default 4:3)
+      slideNumberFormat: '%current%'            # Slide numbering
+      highlightStyle: ir-black                  # highlight.js style
+      highlightLines: true                      # Highlight code lines, ie allow #<<
+      countIncrementalSlides: false             # Incremental slides add pages
+---
+```
+]
+
+See the help page `?xaringan::moon_reader` for all possible options.
+
+
+---
+
+
+## Content classes
+
+Super powerful feature: a dotted CSS class name `.foo[text]` (translated to `<span class="foo">text</span>`, or `<div>...`. 
+
+.pull-left[
+
+*   `.center` Center text
+*   `.pull-left` Two column (left)
+*   `.pull-right` Right col. 
+
+With `hygge` added to the css list there are more options:
+
+
+]
+.pull-right[
+*   `.Large`, `.large`, `.small`, `.footnotesize`, `.scriptsize`, `.tiny`: .Large[Large], .large[large], .small[small], .footnotesize[footnotesize], .scriptsize[scriptsize], .tiny[tiny]
+*   Colours: `.black` and .red[red], .blue[blue], .green[green], .yellow[yellow], .orange[orange], .purple[purple],  .gray[gray or grey]
+
+
+]
+
+
+
+
+---
+
+## Content classes
+
+The `class` list can add a class to the entire slide (really a CSS class). Use 
+
+`class: option1, option2, ...` 
+
+as the .yellow[first content] of a slide!
+
+* `center` - center page horizontally
+* `middle` - center page vertically
+* `bottom` - move text to bottom
+* `inverse` - alternative format (red background for default)
+* `animate` - slide transition animations (add `animate.min.css` to css list!)
+
+---
+
+background-image: url(https://eyesofodysseus.files.wordpress.com/2013/04/wpid-840237139.jpg?w=700&zoom=2)
+background-size: 100%
+
+# Full background image
+
+```
+background-image: url(pics/background.jpg)
+background-size: 100%
+```
+
+was used for this slide.
+
+
+---
+
+class: animated, lightSpeedIn
+
+# Animations
+
+*   Add `animate.min.css` (or similar) to YAML
+*   Add `class: animated, animationtype` as content classes. For example
+
+
+`class: animated, lightSpeedIn`
+
+
+Possibilities can be found at [https://daneden.github.io/animate.css/](https://daneden.github.io/animate.css/)
+
+
+[Not sure why you'd want to do this, but ...]
+
+---
+
+class: animated, fadeIn
+
+
+# HTML widgets / Shiny
+
+Some HTML widgets might work. Shiny won't.
+
+.footnotesize[
+```{r eval=require('DT'), tidy=FALSE}
+DT::datatable(trees, fillContainer = FALSE, options = list(pageLength = 4)) %>% 
+  formatStyle('Girth', color = 'red', backgroundColor = 'orange', fontWeight = 'bold')
+```
+]
+
+---
+
+class: animated, rotateIn
+
+
+```{r out.width='100%', fig.height=6, eval=require('leaflet')}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(12.570443, 55.687847, zoom = 17)
+```
+
+---
+
+class: inverse, center, middle
+
+# Tweaking - custom css
+
+---
+
+class: animated, rollIn
+
+# Customize xaringan
+
+Either use one of the xaringan themes: [https://github.com/yihui/xaringan/wiki/Themes](https://github.com/yihui/xaringan/wiki/Themes)
+
+or type CSS directly into the R markdown file:
+
+```
+<style>
+   ... stuff here
+</style>
+```
+
+Or create a CSS file and add that to the YAML.
+
+
+---
+
+class: animated, zoomInRight
+
+
+# Example: redefine the default slide
+
+```
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
+.remark-slide-content{ background-color: #16161d;
+                       color: #fff;
+                       font-size: 220%;    /* Regular text */
+                       font-family: 'Bitter', serif;
+                     }
+```
+
+
+---
+
+# Example: redefine the title slide
+
+```
+.title-slide {
+    background-image: url(kulogowhiteq.png);
+    background-position: 100% 100%;
+    background-size: 30%;
+    background-color:#16161d;
+    color: #fff;
+}
+```
+
