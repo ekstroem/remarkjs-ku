@@ -16,14 +16,14 @@ output:
       countIncrementalSlides: false
 ---
 
+class: middle, sundlogo
+
 ```{r setup, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE}
 #library(knitr)
 options(htmltools.dir.version = FALSE, cache=TRUE)
 knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=16, fig.height=7)
 source("kutheme.R")
 ```
-
-class: middle, sundlogo
 
 # Classes
 
