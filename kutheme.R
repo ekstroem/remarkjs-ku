@@ -12,13 +12,6 @@ ku_colours <- c('#eeeeee', # White
                 "#ffad5b"  # Brownish
                 )
 
-colorblind_colours <- c('#eeeeee', # White
-                        '#f5793a', # Orangy 
-                        '#a95aa1', # Purple
-                        '#85c0f9', # lightblue
-                        '#63acbe'  # Hmmm?!?!
-)
-
 get_theme_palette <- function() {
 
     ggthemr::define_palette(
@@ -28,17 +21,19 @@ get_theme_palette <- function() {
     
 }
 
+# Set the default font for graphics
+default_font_name <- "Kalam Bold"
 
 ggthemr::ggthemr(get_theme_palette())
 
-scale_colour_discrete <- function(...) scale_colour_manual(values=colorblind_colours)
+scale_colour_discrete <- function(...) scale_colour_manual(values=ku_colours)
 
 # scale_colour_manual(values=ku_colours)
 
 theme_xkcd <- function() {
     ggplot2::theme_grey(
              ) +
-        theme(text = element_text(size=34, family="Kalam Bold", colour="#eeeeee"),   # Handwritten font with ÆØÅ
+        theme(text = element_text(size=34, family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
               line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
               rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
               panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
@@ -54,10 +49,14 @@ theme_xkcd <- function() {
          )
 }
 
-
-update_geom_defaults("text", list(family="Kalam Bold"))
-
 xkcd_line <- function(...) {
     geom_line(...)
 }
+
+update_geom_defaults("text", list(family=default_font_name))
+
+
+theme_set(
+  theme_xkcd()
+)
 

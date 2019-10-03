@@ -16,7 +16,7 @@ output:
       countIncrementalSlides: false
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE}
 #library(knitr)
 options(htmltools.dir.version = FALSE, cache=TRUE)
 knitr::opts_chunk$set(dev.args=list(bg="transparent"), fig.width=16, fig.height=7)
@@ -736,16 +736,3 @@ networkData <- data.frame(nodes$name[links$source+1], nodes$name[links$target+1]
 # Plot
 simpleNetwork(networkData)
 ```
-
----
-
-class: center, middle
-
-# `r fontawesome::fa('twitter', fill = "steelblue")` @ClausEkstrom
-
-<script>
-	document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
-		event.preventDefault();
-		zoom.to({ element: event.target });
-	} );
-</script>
