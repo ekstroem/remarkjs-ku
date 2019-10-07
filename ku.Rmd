@@ -6,7 +6,7 @@ date: 'Some day 2019<br>`r fontawesome::fa("twitter", fill = "steelblue")` @Clau
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ['default', 'hygge', 'ku.css']
+    css: ['default', 'hygge', 'animate.min.css', 'ku.css']
     seal: true
     nature:
       ratio: '16:9'
@@ -14,6 +14,11 @@ output:
       highlightStyle: ir-black
       highlightLines: true
       countIncrementalSlides: false
+---
+
+class: animated, fadeIn
+layout: true
+
 ---
 
 class: middle, sundlogo

@@ -354,7 +354,7 @@ a, a > code {
 
 
 .pull-right ~ * {
-  clear: both;
+  clear: none;
 }
 
 img {
