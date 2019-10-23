@@ -15,7 +15,7 @@ The repository consists of the following files:
 
 In addition here hare
 
-*   `animate.min.css` - a CSS file for transition animations. Not strictly necessary except of you want to make transition animations.
+*   `animate.min.css` - a CSS file for transition animations. Not strictly necessary except if you want to make transition animations.
 *   `sundlogowhiteq.png` - the logo for the Faculty of Health Sciences, KU
 
 
