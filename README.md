@@ -1,22 +1,22 @@
 # xaringan theme
 
-This is my own take on a KU template for creating slides using the
-`xaringan` package. Note that the `ku.css` and `kutheme.R` files are
-tweaked fairly frequently, so be aware if you are downloading a new version.
+This is my own take on a UCPH template for creating slides using the
+[`xaringan`](https://github.com/yihui/xaringan) package. Please note that the `ku.css` and `kutheme.R` files are
+frequently updated, so may have changed when downloading the most recent version.
 
 ## How to use?
 
-The repository consists of the following files:
+The repository contains the following files:
 
-*   `ku.Rmd` - an example template that can be used as a starting point for your own slides.
-*   `ku.css` - the CSS style file. Needs to be in the directory of the Rmarkdown file, and `ku.css` should be added to the YAML. 
+*   `ku.Rmd` - an example template that can be used as a starting point for creating your own slides using the UCPH theme.
+*   `ku.css` - the CSS style file. Needs to be in the directory of the Rmarkdown file, and `ku.css` should be added to the YAML header of your Rmarkdown file. 
 *   `kutheme.R` - a file to be sourced to set color scheme and ggplot2 theme.
-*   `kulogowhiteq.png` - a PNG file 
+*   `kulogowhiteq.png` - a PNG file.
 
-In addition here hare
+As well as
 
-*   `animate.min.css` - a CSS file for transition animations. Not strictly necessary except if you want to make transition animations.
-*   `sundlogowhiteq.png` - the logo for the Faculty of Health Sciences, KU
+*   `animate.min.css` - a CSS file for transition animations. Only necessary for making transition animations.
+*   `sundlogowhiteq.png` - the logo for the Faculty of Health Sciences, UCPH.
 
 
 ## To do
