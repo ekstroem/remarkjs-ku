@@ -2,7 +2,7 @@
  *
  * KU - Remark tweaks
  * 
- * Claus Ekstrøm 2016-2019
+ * Claus Ekstrøm 2016-2020
  *
  * This CSS file consists of two types of changes: 1) changes to the default style, and 2) new additions
  * There is no ordering of these and it would be a good idea if they were added in separate sections
@@ -16,14 +16,19 @@
 /* CE Added my favorite fonts */
 @import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans');
 
-body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+
+html {
+  font-size: 16px; /* This is set instead of the default 20px used by remarkjs to ensure that the rest of the CSS file works */
+}
+
+body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
        background-color:#16161d;
      }
 
 /* Default background colour, and font size */
 .remark-slide-content{ background-color: #16161d;
 		       color: #fff;
-		       font-size: 220%;    /* Regular text */
+		       font-size: 220%;  /* Regular text */
 		       font-family: 'Alegreya', serif;		       
 		     }
 
@@ -70,6 +75,7 @@ table td  { padding: 0px 16px; }
  * Changed CSS
  *
  **************/
+
 
 
 
@@ -180,11 +186,25 @@ video#videobg {
 }
 
 
+/******************
+ *
+ *  Default elements
+ *
+ ******************/
+
+
 h1, h2, h3 {
     font-family: 'Alegreya Sans', sans-serif; 
     font-weight: normal;
     font-weight: 600;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
 }
+
+h1 { font-size: 155%; }
+h2 { font-size: 132%; }
+h3 { font-size: 110%; }
+
 
 a, a > code {
   /* Link colours */
@@ -346,6 +366,17 @@ a, a > code {
   float: right;
   width: 47%;
 }
+
+.pull-left6 {
+  float: left;
+  width: 57%;
+}
+
+.pull-right6 {
+  float: right;
+  width: 37%;
+}
+
 
 .pull-down {
   bottom: 0;
