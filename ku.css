@@ -367,6 +367,11 @@ a, a > code {
   width: 47%;
 }
 
+.pull-right ~ p {
+  clear: both;
+}
+
+
 .pull-left6 {
   float: left;
   width: 57%;
