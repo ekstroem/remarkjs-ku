@@ -12,6 +12,16 @@ ku_colours <- c('#eeeeee', # White
                 "#ffad5b"  # Brownish
                 )
 
+ku_colours <- c('#eeeeee', # White
+                "#8282ff", # Blue b9b9ff
+                "#ff7979", # Red
+                '#f2f200', # Yellow
+                "#0bff06", # Green
+                "#eca8e5", # Magenta
+                "#ffad5b"  # Brownish
+                )
+
+
 get_theme_palette <- function() {
 
     ggthemr::define_palette(
