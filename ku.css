@@ -16,20 +16,38 @@
 /* CE Added my favorite fonts */
 @import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans');
 
+/* Default variable and constant */
 
-html {
-  font-size: 16px; /* This is set instead of the default 20px used by remarkjs to ensure that the rest of the CSS file works */
+:root {
+    --main-font: 'Alegreya';           /* Default font - remember to import it above first */
+    --header-font: 'Alegreya Sans';    /* Default font for slide heads */ 
+    --font-size: 220%;                 /* Default text font size */
+    --code-font: 'Source Code Pro', 'Lucida Console', Monaco, monospace ;
+    
+    --bg-color: #16161d;               /* Default background - Eigengrau */
+    --text-color: #fff;                /* Default text colour */
+
+    --inverse-bg-color: #901A1E;       /* Background colour for inverse slides - KU bordeaux */
+    --inverse-text-color: #f3f3f3;     /* Background colour for inverse slides - KU bordeaux */
+
+    --code-bg-highlight: #344aee;      /* Colour used for code high-lighting */
+
+    --table-header-bg-color: #901A1E;  /* Background color for table headers */
+
+    --link-color: #901A1E;             /* Colours of links. If the line is commented out then links will match default text colours */
 }
 
-body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-       background-color:#16161d;
+
+
+body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+       background-color: var(--bg-color);  /* Eigengrau */
      }
 
 /* Default background colour, and font size */
-.remark-slide-content{ background-color: #16161d;
-		       color: #fff;
-		       font-size: 220%;  /* Regular text */
-		       font-family: 'Alegreya', serif;		       
+.remark-slide-content{ background-color: var(--bg-color);
+		       color: var(--text-color);
+		       font-size: var(--font-size);   /* Regular text size */
+		       font-family: var(--main-font), serif;
 		     }
 
 
@@ -39,9 +57,10 @@ body { font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino
     box-shadow: 0 0 0px #888;
 }
 
-/* Change the overall background colour _outside_ the actual slides */
+/* Change the overall background colour _outside_ the actual slides.
+   This is useful if the slide and screen formats do not match */
 body:-webkit-full-screen {
-    background: #16161d;
+    background: var(--bg-color);
 }
 
 
@@ -54,12 +73,12 @@ body:-webkit-full-screen {
 table { display: inline-block; }  /* Fix centering of tables  */
 
 table th {
-    background-color: #901A1E; /* KUs farve for table headers */
+    background-color: var(--table-header-bg-color); 
     padding: 0px 6px; 
 }
 
 tbody tr:nth-child(odd) {   /* Zebra stipes for tables */
-    background-color: #444;    
+    background-color: #666;
 }
 
 tbody tr:nth-child(even) {   /* Zebra stipes for tables */
@@ -70,12 +89,11 @@ tbody tr:nth-child(even) {   /* Zebra stipes for tables */
 table td  { padding: 0px 16px; }
 
 
-/***********
+/**********************
  *
  * Changed CSS
  *
- **************/
-
+ **********************/
 
 
 
@@ -87,7 +105,7 @@ table td  { padding: 0px 16px; }
 }
 
 .sundlogo {
-/*    background-image: url(sundlogowhiteq.png);*/
+    background-image: url(sundlogowhiteq.png);
     background-position: 100% 100%;
     background-size: 30%;
 }
@@ -143,6 +161,15 @@ video#videobg {
 }
 
 
+.caption {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #fff;
+    font-size: 85%;
+}
+
+
 
 
 .cornerlift img
@@ -186,31 +213,16 @@ video#videobg {
 }
 
 
-/******************
- *
- *  Default elements
- *
- ******************/
-
-
-h1, h2, h3 {
-    font-family: 'Alegreya Sans', sans-serif; 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font), sans-serif; 
     font-weight: normal;
     font-weight: 600;
-    margin-block-start: 0.3em;
-    margin-block-end: 0.3em;
 }
 
-h1 { font-size: 155%; }
-h2 { font-size: 132%; }
-h3 { font-size: 110%; }
-
-
 a, a > code {
-  /* Link colours */
-/*  color: rgb(144, 26, 30);  KU colour. Possibly too dark*/
-  color: rgb(170, 52, 56);
-  text-decoration: none;
+    /* Link colours */
+    color: var(--link-color, var(--text-color));
+    text-decoration: none;
 }
 
 .footnote {
@@ -252,16 +264,20 @@ a, a > code {
  *  Normal code output 
  *  Note that .remark-code is also controlled by blocked mathematics
  */
-.remark-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
-				    font-size: 70%;
-				  }
+.remark-code {
+    font-family: var(--code-font);
+    font-size: 70%;
+}
 
-.remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
-				    font-size: 75%;
-				  }
+.remark-inline-code {
+    font-family: var(--code-font);
+    font-size: 75%;
+}
 
-.remark-code-line-highlighted     { background-color: #901A1E; 
-                                  }  /* Color coding of highlighted code */
+ /* Color coding of highlighted code */
+.remark-code-line-highlighted {
+    background-color: var(--code-bg-highlight); 
+} 
 
 
 /*****
@@ -292,13 +308,13 @@ a, a > code {
 
 
 .inverse {
-    background-color: #901A1E;    
-    color: #f3f3f3;
+    background-color: var(--inverse-bg-color);
+    color: var(--inverse-text-color);
     text-shadow: 0 0 20px #333;
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-    color: #f3f3f3;
+    color: var(--inverse-text-color);
     text-shadow: 0 0 20px #333;
 //  line-height: 0.8em;
 }
@@ -322,8 +338,8 @@ a, a > code {
     background-image: url(kulogowhiteq.png);
     background-position: 100% 100%;
     background-size: 30%;
-    background-color:#16161d;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .title-slide h1 {
@@ -341,7 +357,7 @@ a, a > code {
 
 /* Two-column layout */
 .left-column {
-  color: #fff;
+  color: #777;
   width: 20%;
   height: 92%;
   float: left;
@@ -367,11 +383,6 @@ a, a > code {
   width: 47%;
 }
 
-.pull-right ~ p {
-  clear: both;
-}
-
-
 .pull-left6 {
   float: left;
   width: 57%;
@@ -390,7 +401,7 @@ a, a > code {
 
 
 .pull-right ~ * {
-  clear: none;
+  clear: both;
 }
 
 img {
