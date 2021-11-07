@@ -429,6 +429,20 @@ img {
   max-width: 100%;
 }
 
+
+/* Three column layout */
+
+.pull-left3 {
+  float: left;
+  width: 31%;
+}
+
+.pull-right3 {
+  float: right;
+  width: 31%;
+
+}
+
 /*
  *
  * This chunk changes the slide size

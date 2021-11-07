@@ -46,6 +46,13 @@ The `class` list can add a class to the entire slide. Possibilities are
 
 ---
 
+.pull-left[Del1]
+.pull-left[Del2]
+.pull-left[Del3]
+
+
+---
+
 
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/12/We_Can_Do_It%21.jpg)
 background-size: 100%

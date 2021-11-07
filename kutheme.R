@@ -32,7 +32,8 @@ get_theme_palette <- function() {
 }
 
 # Set the default font for graphics
-default_font_name <- "Kalam Bold"
+default_font_name <- "Lato"
+default_font_size <- 30
 
 ggthemr::ggthemr(get_theme_palette())
 
@@ -41,6 +42,25 @@ scale_colour_discrete <- function(...) scale_colour_manual(values=ku_colours)
 # scale_colour_manual(values=ku_colours)
 
 theme_xkcd <- function() {
+    ggplot2::theme_grey(
+             ) +
+        theme(text = element_text(size=default_font_size, family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
+              line = element_line(colour = "#eeeeee", size = 1, linetype = 1, lineend = "butt"),
+              rect = element_rect(fill = "#16161d", colour = "#eeeeee", size = 0.5, linetype = 1),
+              panel.background = element_rect(fill = "transparent", colour = NA), # bg of the panel
+              plot.background = element_rect(fill = "transparent", colour = NA), # bg of the plot
+
+              axis.text = element_text(colour="#eeeeee", size=default_font_size),   # Colour of axis labels
+              axis.line = element_line(size=2, colour="#dddddd"),    # Colour of axis lines
+
+#              axis.text.y=element_text(vjust=5, hjust=5),
+
+              panel.grid = element_line(size=1, colour="#434343"), # Gridlines inside picture
+              legend.key = element_rect(fill="#16161d", colour=NA)              
+         )
+}
+
+theme_xkcd_old <- function() {
     ggplot2::theme_grey(
              ) +
         theme(text = element_text(size=34, family=default_font_name, colour="#eeeeee"),   # Handwritten font with ÆØÅ
@@ -58,6 +78,8 @@ theme_xkcd <- function() {
               legend.key = element_rect(fill="#16161d", colour=NA)              
          )
 }
+
+
 
 xkcd_line <- function(...) {
     geom_line(...)
