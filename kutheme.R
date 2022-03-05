@@ -2,6 +2,16 @@ library("extrafont")
 loadfonts()
 library("ggplot2")
 library("ggthemr")
+#library("xaringanExtra")
+
+#xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "scribble"))
+
+#xaringanExtra::use_tile_view()
+
+#xaringanExtra::use_extra_styles(
+#  hover_code_line = TRUE         #<<
+#  mute_unhighlighted_code = TRUE 
+#)
 
 ku_colours <- c('#eeeeee', # White
                 "#8282ff", # Blue b9b9ff

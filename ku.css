@@ -234,6 +234,35 @@ video#videobg {
 }
 
 
+
+.button {
+    background-color: #bbbbbb;
+    border: none;
+    box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;
+    border-radius: 5px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.button2 {
+border:1px solid gray;
+font-size:1.2em;
+box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+margin:2px 3px;
+padding:1px 5px;
+}
+
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font), sans-serif; 
     font-weight: normal;
