@@ -493,7 +493,13 @@ img {
  * 
  ************/
 
+pre {
+   /* background-color: yellow; */
+}
+
 
 .hljs-ir-black .hljs {
-    border-radius: 15px;
+/*    border-radius: 15px;
+    background: lightblue; 
+*/
 }
